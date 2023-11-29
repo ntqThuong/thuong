@@ -17,18 +17,24 @@ public class webui
     public List<string> UrlRoutes()
     {
         List<string> list = new List<string>();
-        list.Add("webTrangChu|gioithieu|~/web_module/module_GioiThieu.aspx");
-        list.Add("webUuDai|uudai|~/web_module/module_UuDai.aspx");
-        //tài xế
-        list.Add("modulexacnhantaixe|xac-nhan-tai-xe|~/web_module/module_TaiXe.aspx");
-        //login
-        list.Add("modulelogin|login|~/web_module/module_Login.aspx");
-
-        //bài viết
-        list.Add("modulebaiviet|bai-viet-{id_baiviet}|~/web_module/module_BaiViet.aspx");
-        list.Add("moduledanhsachbaiviet|danh-sach-bai-viet-{id_dsbv}|~/web_module/module_DanhSachBaiViet.aspx");
-
-
+        list.Add("webTrangChu|trang-chu|~/Default.aspx");
+        //Giơi thiệu
+        list.Add("webGioiThieu|gioi-thieu|~/web_module/module_GioiThieu.aspx");
+        //Ưu đãi
+        list.Add("webUuDai|uu-dai|~/web_module/module_UuDai.aspx");
+        //menu
+        list.Add("webmenu|Menu|~/web_module/module_Menu.aspx");
+        //blog
+        list.Add("webBlog|blog|~/web_module/module_Blog.aspx");
+      
+        //liên hệ 
+        list.Add("webLienHe|lien-he|~/web_module/module_LienHe.aspx");
+        //đặt bàn 
+        list.Add("webdatban|dat-ban|~/web_module/module_DatBan.aspx");
+        //giỏ hàng
+        list.Add("webgiohang|gio-hang|~/web_module/module_GioHang.aspx");
+        //test
+        list.Add("webtest|t|~/web_module/Default.aspx");
 
         return list;
 

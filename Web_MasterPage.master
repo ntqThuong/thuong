@@ -24,12 +24,99 @@
     <script src="js/jquery.form.min.js"></script>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
-    <style>
-       
-    </style>
+
 </head>
 <body>
     <form id="form1" runat="server">
+        <nav id="menu" class="mm-menu mm-horizontal mm-offcanvas">
+            <ul class="mm-list mm-panel mm-opened mm-current" id="mm-0">
+
+                <li><a href="/"><strong>Trang chủ</strong></a>
+                </li>
+                <li><a class="mm-subopen" href="#mm-1"></a><a href="/gioi-thieu-1/"><strong>Giới thiệu</strong></a>
+
+                </li>
+                <li><a class="mm-subopen" href="#mm-2"></a><a href="/thuc-don/"><strong>Thực đơn</strong></a>
+
+                </li>
+                <li><a href="/uu-dai/"><strong>Ưu đãi</strong></a>
+                </li>
+                <li><a href="/blog-am-thuc/"><strong>Blog ẩm thực </strong></a>
+                </li>
+                <li><a class="mm-subopen" href="#mm-3"></a><a href="/he-thong-cua-hang/"><strong>Hệ thống cửa hàng</strong></a>
+
+                </li>
+                <li><a href="/tuyen-dung/"><strong>Tuyển dụng</strong></a>
+                </li>
+                <li><a href="/lien-he-1/"><strong>Liên hệ</strong></a>
+                </li>
+            </ul>
+            <ul class="mm-list mm-panel mm-hidden" id="mm-1">
+                <li class="mm-subtitle"><a class="mm-subclose" href="#mm-0">Giới thiệu</a></li>
+                <li><a href="/he-thong-nha-hang/">-- Hệ thống nhà hàng</a>
+                </li>
+            </ul>
+            <ul class="mm-list mm-panel mm-hidden" id="mm-2">
+                <li class="mm-subtitle"><a class="mm-subclose" href="#mm-0">Thực đơn</a></li>
+                <li><a href="/bun-hue/">-- Bún Huế</a>
+                </li>
+                <li><a href="/com-hue/">-- Cơm Huế</a>
+                </li>
+                <li><a href="/chao-hue/">-- Cháo Huế</a>
+                </li>
+                <li><a href="/banh-hue/">-- Bánh Huế</a>
+                </li>
+                <li><a href="/do-cuon/">-- Đồ cuốn</a>
+                </li>
+                <li><a href="/nhau/">-- Nhậu</a>
+                </li>
+                <li><a href="/goi-rau/">-- Gỏi rau</a>
+                </li>
+                <li><a href="/mon-an-choi/">-- Món ăn chơi</a>
+                </li>
+                <li><a href="/lau/">-- Lẩu</a>
+                </li>
+                <li><a href="/mon-trang-mieng/">-- Món tráng miệng</a>
+                </li>
+                <li><a href="/mon-cung-dinh/">-- Món cung đình </a>
+                </li>
+            </ul>
+            <ul class="mm-list mm-panel mm-hidden" id="mm-3">
+                <li class="mm-subtitle"><a class="mm-subclose" href="#mm-0">Hệ thống cửa hàng</a></li>
+                <li><a href="/nha-hang-net-hue-thai-ha/">-- Nét Huế Thái Hà</a>
+                </li>
+                <li><a href="/net-hue-hang-bong/">-- Nét Huế Hàng Bông</a>
+                </li>
+                <li><a href="/net-hue-mai-hac-de/">-- Nét Huế Mai Hắc Đế</a>
+                </li>
+                <li><a href="/net-hue-lang-ha/">-- Nét Huế Láng Hạ</a>
+                </li>
+                <li><a href="/net-hue-royal-city/">-- Nét Huế Royal City</a>
+                </li>
+                <li><a href="/net-hue-tran-duy-hung/">-- Nét Huế Trần Duy Hưng</a>
+                </li>
+                <li><a href="/net-hue-nguyen-chi-thanh/">-- Nét Huế Nguyễn Chí Thanh</a>
+                </li>
+                <li><a href="/net-hue-lac-trung/">-- Nét Huế Lạc Trung </a>
+                </li>
+                <li><a href="/net-hue-pham-hung/">-- Nét Huế Phạm Hùng</a>
+                </li>
+                <li><a href="/net-hue-nguyen-van-huyen/">-- Nét Huế Nguyễn Văn Huyên</a>
+                </li>
+                <li><a href="/net-hue-time-city/">-- Nét Huế Time City</a>
+                </li>
+                <li><a href="/net-hue-aeon-mall-ha-dong/">-- Nét Huế Aeon Mall Hà Đông</a>
+                </li>
+                <li><a href="/net-hue-vincom-nguyen-chi-thanh/">-- Nét Huế - Vincom Nguyễn Chí Thanh</a>
+                </li>
+                <li><a href="/net-hue-bigc-thang-long/">-- Nét Huế - BigC Thăng Long</a>
+                </li>
+                <li><a href="/net-hue-ocean-park-gia-lam/">-- Nét Huế Ocean Park Gia Lâm</a>
+                </li>
+                <li><a href="/net-hue-aeon-mall-hai-phong/">-- Nét Huế Aeon Mall Hải Phòng</a>
+                </li>
+            </ul>
+        </nav>
         <div id="page">
             <div class="header-mobile">
                 <div class="flex-container">
@@ -58,13 +145,13 @@
                             <div>
                                 <div class="flex-container">
                                     <div style="height: 92px; width: 0px;"></div>
-                                    <a class="cart-top" href="addcart/index.html" style="align-self: center">
+                                    <a class="cart-top" href="gio-hang" style="align-self: center">
                                         <i class="fa fa-shopping-bag" aria-hidden="true"><span id="countcart">0</span></i> Giỏ hàng
                                     </a>
                                     <div class="search-top showsearch" style="align-self: center">
                                         <i class="fa fa-search"></i>Search
-                            <div class="searchbox ">
-                                <form action="https://nethue.com.vn/search/" method="get" id="frmsearch">
+                            <div class="searchbox " style="display: block;">
+                                <form action="/search/" method="get" id="frmsearch">
                                     <div class="flex-container">
                                         <input name="qr" placeholder="Tìm kiếm " type="text">
                                         <a href="#"><i class="fa fa-search"></i></a>
@@ -73,204 +160,200 @@
                             </div>
 
                                     </div>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="header" style="border-bottom: none; box-shadow: none; z-index: 99999; left: 0px; width: 100%;">
-                    <div class="grid">
+            </div>
+            <div class="header" style="border-bottom: none; box-shadow: none; z-index: 99999; left: 0px; width: 100%;">
+                <div class="grid">
 
-                        <div class="menubar">
+                    <div class="menubar">
 
-                            <ul class="nav" style="text-align: center">
-                                <li class="main "><a href="../index.html">Trang chủ</a>
-                                </li>
-                                <li class="main "><a href="index.html">Giới thiệu</a>
-                                    <ul style="display: none;">
-                                        <div class="">
-                                            <li><a href="../he-thong-nha-hang/index.html">Hệ thống nhà hàng</a></li>
+                        <ul class="nav" style="text-align: center">
+                            <li class="main "><a href="Default.aspx">Trang chủ</a>
+                            </li>
+                            <li class="main "><a href="gioi-thieu">Giới thiệu</a>
+                            </li>
+                            <li class="main "><a href="menu">Thực đơn</a>
+                                <ul style="display: none;">
+                                    <div>
+                                        <li><a href="../bun-hue/index.html">Bún Huế</a></li>
+                                        <li><a href="../com-hue/index.html">Cơm Huế</a></li>
+                                        <li><a href="../chao-hue/index.html">Cháo Huế</a></li>
+                                        <li><a href="../banh-hue/index.html">Bánh Huế</a></li>
+                                        <li><a href="../do-cuon/index.html">Đồ cuốn</a></li>
+                                        <li><a href="../nhau/index.html">Nhậu</a></li>
+                                        <li><a href="../goi-rau/index.html">Gỏi rau</a></li>
+                                        <li><a href="../mon-an-choi/index.html">Món ăn chơi</a></li>
+                                        <li><a href="../lau/index.html">Lẩu</a></li>
+                                        <li><a href="../mon-trang-mieng/index.html">Món tráng miệng</a></li>
+                                        <li><a href="../mon-cung-dinh/index.html">Món cung đình </a></li>
 
-                                        </div>
-                                    </ul>
-                                </li>
-                                <li class="main "><a href="../thuc-don/index.html">Thực đơn</a>
-                                    <ul style="display: none;">
-                                        <div>
-                                            <li><a href="../bun-hue/index.html">Bún Huế</a></li>
-                                            <li><a href="../com-hue/index.html">Cơm Huế</a></li>
-                                            <li><a href="../chao-hue/index.html">Cháo Huế</a></li>
-                                            <li><a href="../banh-hue/index.html">Bánh Huế</a></li>
-                                            <li><a href="../do-cuon/index.html">Đồ cuốn</a></li>
-                                            <li><a href="../nhau/index.html">Nhậu</a></li>
-                                            <li><a href="../goi-rau/index.html">Gỏi rau</a></li>
-                                            <li><a href="../mon-an-choi/index.html">Món ăn chơi</a></li>
-                                            <li><a href="../lau/index.html">Lẩu</a></li>
-                                            <li><a href="../mon-trang-mieng/index.html">Món tráng miệng</a></li>
-                                            <li><a href="../mon-cung-dinh/index.html">Món cung đình </a></li>
+                                    </div>
+                                </ul>
+                            </li>
+                            <li class="main "><a href="uu-dai">Ưu đãi</a>
+                            </li>
+                            <li class="main "><a href="blog">Blog ẩm thực </a>
+                            </li>
 
-                                        </div>
-                                    </ul>
-                                </li>
-                                <li class="main "><a href="../uu-dai/index.html">Ưu đãi</a>
-                                </li>
-                                <li class="main "><a href="../blog-am-thuc/index.html">Blog ẩm thực </a>
-                                </li>
+                            <li class="main "><a href="lien-he">Liên hệ</a>
+                            </li>
 
-                                <li class="main "><a href="../lien-he-1/index.html">Liên hệ</a>
-                                </li>
-
-                            </ul>
-                            <a href="../dat-ban/index.html" class="btn-datban-bar"><i class="fa fa-calendar-check-o"></i>Đặt bàn</a>
-                        </div>
+                        </ul>
+                        <a href="dat-ban" class="btn-datban-bar"><i class="fa fa-calendar-check-o"></i>Đặt bàn</a>
                     </div>
                 </div>
-                <div class="c"></div>
-                <div class="swiper-container swiper-container-initialized swiper-container-horizontal" id="slide_home">
-                    <!--<div class="homeslide-next"> </div>
+            </div>
+            <div class="c"></div>
+            <div class="swiper-container swiper-container-initialized swiper-container-horizontal" id="slide_home">
+                <!--<div class="homeslide-next"> </div>
     <div class="homeslide-prev"> </div>-->
-                    <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
-                        <div class="swiper-slide swiper-slide-active" style="position: relative; width: 1090px;">
-                            <!--<div class="slide-description">
+                <div class="swiper-wrapper" style="transform: translate3d(0px, 0px, 0px);">
+                    <div class="swiper-slide swiper-slide-active" style="position: relative; width: 1090px;">
+                        <!--<div class="slide-description">
             <div class="description">
             	<h2 class="title-slide"></h2>
                 
             </div>
         </div>-->
-                            <a href="#" target="">
-                                <img style="display: block; height: 190px;" src="../images/banner/pic-about.png" alt="/images/banner/pic-about.png" width="100%"></a>
-                        </div>
+                        <a href="#" target="">
+                            <img style="display: block; height: 190px;" src="../images/banner/pic-about.png" alt="/images/banner/pic-about.png" width="100%"></a>
                     </div>
-                    <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                 </div>
-                <script>
-                    $(function () {
-                        var swiper_slide_home = new Swiper('#slide_home', {
-                            loop: false,
-                            slidesPerView: 1,
-                            autoplay: {
-                                delay: 5000,
-                            },
-                            speed: 500,
-                            spaceBetween: 0,
-                            navigation: {
-                                nextEl: '.homeslide-next',
-                                prevEl: '.homeslide-prev',
-                            }
-                        });
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            </div>
+            <script>
+                $(function () {
+                    var swiper_slide_home = new Swiper('#slide_home', {
+                        loop: false,
+                        slidesPerView: 1,
+                        autoplay: {
+                            delay: 5000,
+                        },
+                        speed: 500,
+                        spaceBetween: 0,
+                        navigation: {
+                            nextEl: '.homeslide-next',
+                            prevEl: '.homeslide-prev',
+                        }
                     });
-                </script>
+                });
+            </script>
 
-            </div>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
-            </asp:ContentPlaceHolder>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
-            </asp:ContentPlaceHolder>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
-            </asp:ContentPlaceHolder>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder5" runat="server">
-            </asp:ContentPlaceHolder>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder6" runat="server">
-            </asp:ContentPlaceHolder>
-            <asp:ContentPlaceHolder ID="ContentPlaceHolder7" runat="server">
-            </asp:ContentPlaceHolder>
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder5" runat="server">
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder6" runat="server">
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder7" runat="server">
+        </asp:ContentPlaceHolder>
 
 
-            <div class="footer" style="width: 100%; overflow: hidden">
-                <div class="c30"></div>
-                <div class="grid">
-                    <div class="flex-container  flex-space-between">
+        <div class="footer" style="width: 100%; overflow: hidden">
+            <div class="c30"></div>
+            <div class="grid">
+                <div class="flex-container  flex-space-between">
 
-                        <div class="cell-2-5 mobile-cell-1-1 tab-cell-1-1 pad-cell-1-1 margin-bottom-20">
-                            <div class="flex-container">
-                                <div class="cell-1-2 mobile-cell-1-1">
-                                    <img src="../images/logo/logo.png" />
-                                </div>
-                                <div class="cell-1-2 mobile-cell-1-1">
-                                    <div class="title-footer">Thông tin liên hệ</div>
-                                    <div class="c20"></div>
-                                    <div>
-                                        <table border="0" cellpadding="5" cellspacing="0" class="table-list" style="border-collapse: collapse">
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <img src="images/icon/icon-location.png" style="height: 15px; width: 11px" />
-
-                                                    <td>Tầng 4 số 34 - 36 Th&aacute;i H&agrave;, H&agrave; Nội</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <i class="bi bi-telephone"></i>
-                                                        <td>Điện thoại: 0968 296433<br />
-                                                            Hotline: 19009077</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <i class="bi bi-envelope"></i>
-                                                        <td>Email: nhahangnethue@gmail.com</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>
-                                                        <i class="bi bi-globe"></i>
-                                                        <td>Website: nethue.com.vn</td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                </div>
+                    <div class="cell-2-5 mobile-cell-1-1 tab-cell-1-1 pad-cell-1-1 margin-bottom-20">
+                        <div class="flex-container">
+                            <div class="cell-1-2 mobile-cell-1-1">
+                                <img src="../images/logo/logo.png" />
                             </div>
-                        </div>
-                        <div class="cell-3-5 mobile-cell-1-1 tab-cell-1-1 pad-cell-1-1">
-                            <div class="flex-container">
-                                <div class="cell-1-3 mobile-cell-1-1 tab-cell-1-1 margin-bottom-20">
-                                    <div class="cell-1-1 tab-cell-1-2 mobile-cell-1-1 margin-bottom-20" style="padding-left: 10px;">
-                                        <div class="title-footer"><a href="tin-tuc-noi-bat/index.html">Tin tức nổi bật</a></div>
-                                        <div class="c10"></div>
-                                        <ul class="menufooter ">
-                                        </ul>
-                                        <div class="title-footer"><a href="co-the-ban-quan-tam/index.html">Có thể bạn quan tâm</a></div>
-                                        <div class="c10"></div>
-                                        <ul class="menufooter ">
-                                            <li><a href="chinh-sach-giao-hang/index.html">Chính sách giao hàng</a></li>
-                                            <li><a href="nhom-dong-dat-tiec/index.html">Nhóm đông đặt tiệc</a></li>
-                                            <li><a href="dat-mon-phuc-vu-tai-nha/index.html">Đặt món phục vụ tại nhà</a></li>
-                                        </ul>
-                                    </div>
+                            <div class="cell-1-2 mobile-cell-1-1">
+                                <div class="title-footer">Thông tin liên hệ</div>
+                                <div class="c20"></div>
+                                <div>
+                                    <table border="0" cellpadding="5" cellspacing="0" class="table-list" style="border-collapse: collapse">
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <img src="images/icon/icon-location.png" style="height: 15px; width: 11px" />
 
-                                </div>
-                                <div class="cell-2-3 mobile-cell-1-1 tab-cell-1-1 ">
-                                    <div class="flex-container flex-space-between">
-                                        <div class="cell-3-5 mobile-cell-1-1 margin-bottom-20">
-                                            <iframe src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/nhahangnethue/&amp;tabs&amp;width=340&amp;height=214&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=1584582048427439" width="100%" height="214" style="border: none; overflow: hidden" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-                                        </div>
-                                        <div class="cell-2-5 mobile-cell-1-1 margin-bottom-20">
-                                            <div class="title-footer">Mạng xã hội</div>
-                                            <div class="c20"></div>
-                                            <div class="linksmo">
-                                                <a href="https://www.facebook.com/nhahangnethue/">
-                                                    <img src="images/logo/facebook.png" /></a>
-                                                <a href="#">
-                                                    <img src="images/logo/twitter.png" /></a>
-                                                <a href="#">
-                                                    <img src="images/logo/youtube.png" /></a>
-                                                <a href="#">
-                                                    <img src="images/logo/zalo.png" /></a>
-                                            </div>
-                                            <div class="c10"></div>
-
-                                        </div>
-
-                                    </div>
-
-
+                                                <td>Tầng 4 số 34 - 36 Th&aacute;i H&agrave;, H&agrave; Nội</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <i class="bi bi-telephone"></i>
+                                                    <td>Điện thoại: 0968 296433<br />
+                                                        Hotline: 19009077</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <i class="bi bi-envelope"></i>
+                                                    <td>Email: nhahangnethue@gmail.com</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <i class="bi bi-globe"></i>
+                                                    <td>Website: nethue.com.vn</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="cell-3-5 mobile-cell-1-1 tab-cell-1-1 pad-cell-1-1">
+                        <div class="flex-container">
+                            <div class="cell-1-3 mobile-cell-1-1 tab-cell-1-1 margin-bottom-20">
+                                <div class="cell-1-1 tab-cell-1-2 mobile-cell-1-1 margin-bottom-20" style="padding-left: 10px;">
+                                    <div class="title-footer"><a href="tin-tuc-noi-bat/index.html">Tin tức nổi bật</a></div>
+                                    <div class="c10"></div>
+                                    <ul class="menufooter ">
+                                    </ul>
+                                    <div class="title-footer"><a href="co-the-ban-quan-tam/index.html">Có thể bạn quan tâm</a></div>
+                                    <div class="c10"></div>
+                                    <ul class="menufooter ">
+                                        <li><a href="chinh-sach-giao-hang/index.html">Chính sách giao hàng</a></li>
+                                        <li><a href="nhom-dong-dat-tiec/index.html">Nhóm đông đặt tiệc</a></li>
+                                        <li><a href="dat-mon-phuc-vu-tai-nha/index.html">Đặt món phục vụ tại nhà</a></li>
+                                    </ul>
+                                </div>
 
+                            </div>
+                            <div class="cell-2-3 mobile-cell-1-1 tab-cell-1-1 ">
+                                <div class="flex-container flex-space-between">
+                                    <div class="cell-3-5 mobile-cell-1-1 margin-bottom-20">
+                                        <iframe src="https://www.facebook.com/plugins/page.php?href=https://www.facebook.com/nhahangnethue/&amp;tabs&amp;width=340&amp;height=214&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=1584582048427439" width="100%" height="214" style="border: none; overflow: hidden" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+                                    </div>
+                                    <div class="cell-2-5 mobile-cell-1-1 margin-bottom-20">
+                                        <div class="title-footer">Mạng xã hội</div>
+                                        <div class="c20"></div>
+                                        <div class="linksmo">
+                                            <a href="https://www.facebook.com/nhahangnethue/">
+                                                <img src="images/logo/facebook.png" /></a>
+                                            <a href="#">
+                                                <img src="images/logo/twitter.png" /></a>
+                                            <a href="#">
+                                                <img src="images/logo/youtube.png" /></a>
+                                            <a href="#">
+                                                <img src="images/logo/zalo.png" /></a>
+                                        </div>
+                                        <div class="c10"></div>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="c30"></div>
+
             </div>
+            <div class="c30"></div>
+        </div>
 
         </div>
 
