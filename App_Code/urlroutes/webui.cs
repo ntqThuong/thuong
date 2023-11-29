@@ -17,8 +17,8 @@ public class webui
     public List<string> UrlRoutes()
     {
         List<string> list = new List<string>();
-        list.Add("webTrangChu|home|~/web_module/module_Default.aspx");
-       
+        list.Add("webTrangChu|gioithieu|~/web_module/module_GioiThieu.aspx");
+        list.Add("webUuDai|uudai|~/web_module/module_UuDai.aspx");
         //tài xế
         list.Add("modulexacnhantaixe|xac-nhan-tai-xe|~/web_module/module_TaiXe.aspx");
         //login
