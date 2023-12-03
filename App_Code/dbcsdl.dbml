@@ -10,17 +10,17 @@
       <Association Name="admin_GroupUser_admin_AccessGroupUserForm" Member="admin_GroupUser" ThisKey="groupuser_id" OtherKey="groupuser_id" Type="admin_GroupUser" IsForeignKey="true" DeleteRule="CASCADE" />
     </Type>
   </Table>
-  <Table Name="dbo.tb_Users" Member="tb_Users">
-    <Type Name="tb_User">
-      <Column Name="users_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="users_fullname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="users_address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="users_username" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="users_password" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="users_genner" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="users_phone" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="users_active" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="users_point" Type="System.Int32" DbType="Int" CanBeNull="true" />
+  <Table Name="dbo.admin_User" Member="admin_Users">
+    <Type Name="admin_User">
+      <Column Name="username_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username_username" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="username_password" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="username_fullname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="username_gender" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="username_phone" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="username_email" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="username_active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="groupuser_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
   <Table Name="dbo.admin_AccessGroupUserModule" Member="admin_AccessGroupUserModules">
@@ -65,85 +65,6 @@
       <Column Name="module_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="module_icon" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
       <Column Name="module_active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.admin_User" Member="admin_Users">
-    <Type Name="admin_User">
-      <Column Name="username_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="username_username" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="username_password" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="username_fullname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="username_gender" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="username_phone" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="username_email" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="username_active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="groupuser_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tb_DetailedInvoice" Member="tb_DetailedInvoices">
-    <Type Name="tb_DetailedInvoice">
-      <Column Name="di_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="invoice_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="pr_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="di_currentPrice" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="di_discount" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tb_DetailedPromotions" Member="tb_DetailedPromotions">
-    <Type Name="tb_DetailedPromotion">
-      <Column Name="dpr_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="promotion_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="pr_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tb_Evaluate" Member="tb_Evaluates">
-    <Type Name="tb_Evaluate">
-      <Column Name="evaluate_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="evaluate_content" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="evaluate_day" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="users_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="evaluate_star" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tb_Invoice" Member="tb_Invoices">
-    <Type Name="tb_Invoice">
-      <Column Name="invoice_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="users_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="invoice_day" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="invoice_status" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tb_Product" Member="tb_Products">
-    <Type Name="tb_Product">
-      <Column Name="pr_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="pr_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="pr_price" Type="System.Int32" DbType="Int" CanBeNull="true" />
-      <Column Name="pr_image" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="pr_describe" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="pr_status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
-      <Column Name="prc_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tb_ProductCategory" Member="tb_ProductCategories">
-    <Type Name="tb_ProductCategory">
-      <Column Name="prc_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="prc_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="prt_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tb_ProductType" Member="tb_ProductTypes">
-    <Type Name="tb_ProductType">
-      <Column Name="prt_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="prt_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-    </Type>
-  </Table>
-  <Table Name="dbo.tb_Promotion" Member="tb_Promotions">
-    <Type Name="tb_Promotion">
-      <Column Name="promotion_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="promotion_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
-      <Column Name="promotion_begin" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="promotion_expired" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
-      <Column Name="promotion_point" Type="System.Int32" DbType="Int" CanBeNull="true" />
     </Type>
   </Table>
 </Database>

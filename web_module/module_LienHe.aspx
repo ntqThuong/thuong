@@ -10,9 +10,10 @@
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="ContentPlaceHolder5" runat="Server">
     <div class="crumb">
-        <div class="grid"><a href="/">Trang chủ</a> <i class="fa fa-angle-right"></i><a href="/lien-he-1/">Liên hệ</a></div>
+        <div class="grid"><a href="/">Trang chủ</a> <i class="fa fa-angle-right"></i><a href="lien-he">Liên hệ</a></div>
     </div>
-    <div class="grid" style="background: #FFF; padding: 20px;">
+    <div class="page-about">
+    <div class="grid" >
         <div class="" style="position: relative;">
             <div class="">
                 <h1 class="title-page title-home"><span>Liên hệ</span></h1>
@@ -83,6 +84,7 @@
 
         <div class="c30"></div>
     </div>
+        </div>
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="ContentPlaceHolder6" runat="Server">
 </asp:Content>

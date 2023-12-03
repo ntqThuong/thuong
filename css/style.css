@@ -1,4 +1,4 @@
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
+﻿@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
 
 html, body {
     font-family: Muli-R, Arial, sans-serif;
@@ -32,7 +32,12 @@ img {
 }
 
 #page {
-    background: url(../images/logo/bg.png);
+    background-image: url('../images/logo/bg-video.png');
+    /* Đường dẫn đến hình nền */
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    background-attachment: fixed;
     overflow: hidden;
     width: 100%;
     margin: 0 auto;
@@ -1063,10 +1068,11 @@ img {
     }
 
 .page-about {
-    background-image: url(../images/bg-page-about.png);
-    background-color: #FFF;
-    background-position: center top;
+    background-image: url(https://vuonnhien.vn/wp-content/uploads/2020/03/tranh-ve-dong-que.jpg);
+    background-repeat: no-repeat;
+    background-position: center bottom;
     background-size: cover;
+    background-attachment: fixed;
 }
 
 .title-footer {
@@ -1351,6 +1357,14 @@ img {
             line-height: 25px;
             color: #333;
         }
+
+.searchbox {
+    display: none; /* Hide the search box by default */
+}
+
+.showsearch .searchbox {
+    display: block;
+}
 
 .grid-box-menu-home {
     position: relative;
@@ -1853,4 +1867,17 @@ img {
         float: right;
         margin-bottom: 10px;
     }
+}
+
+.page-menu {
+    background-image: url('../images/logo/bg-page-about.png');
+    /* Đường dẫn đến hình nền */
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
 }

@@ -32,9 +32,9 @@ public partial class dbcsdlDataContext : System.Data.Linq.DataContext
   partial void Insertadmin_AccessGroupUserForm(admin_AccessGroupUserForm instance);
   partial void Updateadmin_AccessGroupUserForm(admin_AccessGroupUserForm instance);
   partial void Deleteadmin_AccessGroupUserForm(admin_AccessGroupUserForm instance);
-  partial void Inserttb_User(tb_User instance);
-  partial void Updatetb_User(tb_User instance);
-  partial void Deletetb_User(tb_User instance);
+  partial void Insertadmin_User(admin_User instance);
+  partial void Updateadmin_User(admin_User instance);
+  partial void Deleteadmin_User(admin_User instance);
   partial void Insertadmin_AccessGroupUserModule(admin_AccessGroupUserModule instance);
   partial void Updateadmin_AccessGroupUserModule(admin_AccessGroupUserModule instance);
   partial void Deleteadmin_AccessGroupUserModule(admin_AccessGroupUserModule instance);
@@ -50,33 +50,6 @@ public partial class dbcsdlDataContext : System.Data.Linq.DataContext
   partial void Insertadmin_Module(admin_Module instance);
   partial void Updateadmin_Module(admin_Module instance);
   partial void Deleteadmin_Module(admin_Module instance);
-  partial void Insertadmin_User(admin_User instance);
-  partial void Updateadmin_User(admin_User instance);
-  partial void Deleteadmin_User(admin_User instance);
-  partial void Inserttb_DetailedInvoice(tb_DetailedInvoice instance);
-  partial void Updatetb_DetailedInvoice(tb_DetailedInvoice instance);
-  partial void Deletetb_DetailedInvoice(tb_DetailedInvoice instance);
-  partial void Inserttb_DetailedPromotion(tb_DetailedPromotion instance);
-  partial void Updatetb_DetailedPromotion(tb_DetailedPromotion instance);
-  partial void Deletetb_DetailedPromotion(tb_DetailedPromotion instance);
-  partial void Inserttb_Evaluate(tb_Evaluate instance);
-  partial void Updatetb_Evaluate(tb_Evaluate instance);
-  partial void Deletetb_Evaluate(tb_Evaluate instance);
-  partial void Inserttb_Invoice(tb_Invoice instance);
-  partial void Updatetb_Invoice(tb_Invoice instance);
-  partial void Deletetb_Invoice(tb_Invoice instance);
-  partial void Inserttb_Product(tb_Product instance);
-  partial void Updatetb_Product(tb_Product instance);
-  partial void Deletetb_Product(tb_Product instance);
-  partial void Inserttb_ProductCategory(tb_ProductCategory instance);
-  partial void Updatetb_ProductCategory(tb_ProductCategory instance);
-  partial void Deletetb_ProductCategory(tb_ProductCategory instance);
-  partial void Inserttb_ProductType(tb_ProductType instance);
-  partial void Updatetb_ProductType(tb_ProductType instance);
-  partial void Deletetb_ProductType(tb_ProductType instance);
-  partial void Inserttb_Promotion(tb_Promotion instance);
-  partial void Updatetb_Promotion(tb_Promotion instance);
-  partial void Deletetb_Promotion(tb_Promotion instance);
   #endregion
 	
 	public dbcsdlDataContext() : 
@@ -117,11 +90,11 @@ public partial class dbcsdlDataContext : System.Data.Linq.DataContext
 		}
 	}
 	
-	public System.Data.Linq.Table<tb_User> tb_Users
+	public System.Data.Linq.Table<admin_User> admin_Users
 	{
 		get
 		{
-			return this.GetTable<tb_User>();
+			return this.GetTable<admin_User>();
 		}
 	}
 	
@@ -162,78 +135,6 @@ public partial class dbcsdlDataContext : System.Data.Linq.DataContext
 		get
 		{
 			return this.GetTable<admin_Module>();
-		}
-	}
-	
-	public System.Data.Linq.Table<admin_User> admin_Users
-	{
-		get
-		{
-			return this.GetTable<admin_User>();
-		}
-	}
-	
-	public System.Data.Linq.Table<tb_DetailedInvoice> tb_DetailedInvoices
-	{
-		get
-		{
-			return this.GetTable<tb_DetailedInvoice>();
-		}
-	}
-	
-	public System.Data.Linq.Table<tb_DetailedPromotion> tb_DetailedPromotions
-	{
-		get
-		{
-			return this.GetTable<tb_DetailedPromotion>();
-		}
-	}
-	
-	public System.Data.Linq.Table<tb_Evaluate> tb_Evaluates
-	{
-		get
-		{
-			return this.GetTable<tb_Evaluate>();
-		}
-	}
-	
-	public System.Data.Linq.Table<tb_Invoice> tb_Invoices
-	{
-		get
-		{
-			return this.GetTable<tb_Invoice>();
-		}
-	}
-	
-	public System.Data.Linq.Table<tb_Product> tb_Products
-	{
-		get
-		{
-			return this.GetTable<tb_Product>();
-		}
-	}
-	
-	public System.Data.Linq.Table<tb_ProductCategory> tb_ProductCategories
-	{
-		get
-		{
-			return this.GetTable<tb_ProductCategory>();
-		}
-	}
-	
-	public System.Data.Linq.Table<tb_ProductType> tb_ProductTypes
-	{
-		get
-		{
-			return this.GetTable<tb_ProductType>();
-		}
-	}
-	
-	public System.Data.Linq.Table<tb_Promotion> tb_Promotions
-	{
-		get
-		{
-			return this.GetTable<tb_Promotion>();
 		}
 	}
 }
@@ -454,235 +355,235 @@ public partial class admin_AccessGroupUserForm : INotifyPropertyChanging, INotif
 	}
 }
 
-[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tb_Users")]
-public partial class tb_User : INotifyPropertyChanging, INotifyPropertyChanged
+[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.admin_User")]
+public partial class admin_User : INotifyPropertyChanging, INotifyPropertyChanged
 {
 	
 	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
 	
-	private int _users_id;
+	private int _username_id;
 	
-	private string _users_fullname;
+	private string _username_username;
 	
-	private string _users_address;
+	private string _username_password;
 	
-	private string _users_username;
+	private string _username_fullname;
 	
-	private string _users_password;
+	private System.Nullable<bool> _username_gender;
 	
-	private System.Nullable<bool> _users_genner;
+	private string _username_phone;
 	
-	private string _users_phone;
+	private string _username_email;
 	
-	private string _users_active;
+	private System.Nullable<bool> _username_active;
 	
-	private System.Nullable<int> _users_point;
+	private System.Nullable<int> _groupuser_id;
 	
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
     partial void OnCreated();
-    partial void Onusers_idChanging(int value);
-    partial void Onusers_idChanged();
-    partial void Onusers_fullnameChanging(string value);
-    partial void Onusers_fullnameChanged();
-    partial void Onusers_addressChanging(string value);
-    partial void Onusers_addressChanged();
-    partial void Onusers_usernameChanging(string value);
-    partial void Onusers_usernameChanged();
-    partial void Onusers_passwordChanging(string value);
-    partial void Onusers_passwordChanged();
-    partial void Onusers_gennerChanging(System.Nullable<bool> value);
-    partial void Onusers_gennerChanged();
-    partial void Onusers_phoneChanging(string value);
-    partial void Onusers_phoneChanged();
-    partial void Onusers_activeChanging(string value);
-    partial void Onusers_activeChanged();
-    partial void Onusers_pointChanging(System.Nullable<int> value);
-    partial void Onusers_pointChanged();
+    partial void Onusername_idChanging(int value);
+    partial void Onusername_idChanged();
+    partial void Onusername_usernameChanging(string value);
+    partial void Onusername_usernameChanged();
+    partial void Onusername_passwordChanging(string value);
+    partial void Onusername_passwordChanged();
+    partial void Onusername_fullnameChanging(string value);
+    partial void Onusername_fullnameChanged();
+    partial void Onusername_genderChanging(System.Nullable<bool> value);
+    partial void Onusername_genderChanged();
+    partial void Onusername_phoneChanging(string value);
+    partial void Onusername_phoneChanged();
+    partial void Onusername_emailChanging(string value);
+    partial void Onusername_emailChanged();
+    partial void Onusername_activeChanging(System.Nullable<bool> value);
+    partial void Onusername_activeChanged();
+    partial void Ongroupuser_idChanging(System.Nullable<int> value);
+    partial void Ongroupuser_idChanged();
     #endregion
 	
-	public tb_User()
+	public admin_User()
 	{
 		OnCreated();
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_users_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-	public int users_id
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_username_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+	public int username_id
 	{
 		get
 		{
-			return this._users_id;
+			return this._username_id;
 		}
 		set
 		{
-			if ((this._users_id != value))
+			if ((this._username_id != value))
 			{
-				this.Onusers_idChanging(value);
+				this.Onusername_idChanging(value);
 				this.SendPropertyChanging();
-				this._users_id = value;
-				this.SendPropertyChanged("users_id");
-				this.Onusers_idChanged();
+				this._username_id = value;
+				this.SendPropertyChanged("username_id");
+				this.Onusername_idChanged();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_users_fullname", DbType="NVarChar(MAX)")]
-	public string users_fullname
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_username_username", DbType="NVarChar(MAX)")]
+	public string username_username
 	{
 		get
 		{
-			return this._users_fullname;
+			return this._username_username;
 		}
 		set
 		{
-			if ((this._users_fullname != value))
+			if ((this._username_username != value))
 			{
-				this.Onusers_fullnameChanging(value);
+				this.Onusername_usernameChanging(value);
 				this.SendPropertyChanging();
-				this._users_fullname = value;
-				this.SendPropertyChanged("users_fullname");
-				this.Onusers_fullnameChanged();
+				this._username_username = value;
+				this.SendPropertyChanged("username_username");
+				this.Onusername_usernameChanged();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_users_address", DbType="NVarChar(MAX)")]
-	public string users_address
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_username_password", DbType="NVarChar(MAX)")]
+	public string username_password
 	{
 		get
 		{
-			return this._users_address;
+			return this._username_password;
 		}
 		set
 		{
-			if ((this._users_address != value))
+			if ((this._username_password != value))
 			{
-				this.Onusers_addressChanging(value);
+				this.Onusername_passwordChanging(value);
 				this.SendPropertyChanging();
-				this._users_address = value;
-				this.SendPropertyChanged("users_address");
-				this.Onusers_addressChanged();
+				this._username_password = value;
+				this.SendPropertyChanged("username_password");
+				this.Onusername_passwordChanged();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_users_username", DbType="NVarChar(MAX)")]
-	public string users_username
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_username_fullname", DbType="NVarChar(MAX)")]
+	public string username_fullname
 	{
 		get
 		{
-			return this._users_username;
+			return this._username_fullname;
 		}
 		set
 		{
-			if ((this._users_username != value))
+			if ((this._username_fullname != value))
 			{
-				this.Onusers_usernameChanging(value);
+				this.Onusername_fullnameChanging(value);
 				this.SendPropertyChanging();
-				this._users_username = value;
-				this.SendPropertyChanged("users_username");
-				this.Onusers_usernameChanged();
+				this._username_fullname = value;
+				this.SendPropertyChanged("username_fullname");
+				this.Onusername_fullnameChanged();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_users_password", DbType="NVarChar(MAX)")]
-	public string users_password
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_username_gender", DbType="Bit")]
+	public System.Nullable<bool> username_gender
 	{
 		get
 		{
-			return this._users_password;
+			return this._username_gender;
 		}
 		set
 		{
-			if ((this._users_password != value))
+			if ((this._username_gender != value))
 			{
-				this.Onusers_passwordChanging(value);
+				this.Onusername_genderChanging(value);
 				this.SendPropertyChanging();
-				this._users_password = value;
-				this.SendPropertyChanged("users_password");
-				this.Onusers_passwordChanged();
+				this._username_gender = value;
+				this.SendPropertyChanged("username_gender");
+				this.Onusername_genderChanged();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_users_genner", DbType="Bit")]
-	public System.Nullable<bool> users_genner
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_username_phone", DbType="NVarChar(MAX)")]
+	public string username_phone
 	{
 		get
 		{
-			return this._users_genner;
+			return this._username_phone;
 		}
 		set
 		{
-			if ((this._users_genner != value))
+			if ((this._username_phone != value))
 			{
-				this.Onusers_gennerChanging(value);
+				this.Onusername_phoneChanging(value);
 				this.SendPropertyChanging();
-				this._users_genner = value;
-				this.SendPropertyChanged("users_genner");
-				this.Onusers_gennerChanged();
+				this._username_phone = value;
+				this.SendPropertyChanged("username_phone");
+				this.Onusername_phoneChanged();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_users_phone", DbType="NVarChar(MAX)")]
-	public string users_phone
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_username_email", DbType="NVarChar(MAX)")]
+	public string username_email
 	{
 		get
 		{
-			return this._users_phone;
+			return this._username_email;
 		}
 		set
 		{
-			if ((this._users_phone != value))
+			if ((this._username_email != value))
 			{
-				this.Onusers_phoneChanging(value);
+				this.Onusername_emailChanging(value);
 				this.SendPropertyChanging();
-				this._users_phone = value;
-				this.SendPropertyChanged("users_phone");
-				this.Onusers_phoneChanged();
+				this._username_email = value;
+				this.SendPropertyChanged("username_email");
+				this.Onusername_emailChanged();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_users_active", DbType="NVarChar(MAX)")]
-	public string users_active
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_username_active", DbType="Bit")]
+	public System.Nullable<bool> username_active
 	{
 		get
 		{
-			return this._users_active;
+			return this._username_active;
 		}
 		set
 		{
-			if ((this._users_active != value))
+			if ((this._username_active != value))
 			{
-				this.Onusers_activeChanging(value);
+				this.Onusername_activeChanging(value);
 				this.SendPropertyChanging();
-				this._users_active = value;
-				this.SendPropertyChanged("users_active");
-				this.Onusers_activeChanged();
+				this._username_active = value;
+				this.SendPropertyChanged("username_active");
+				this.Onusername_activeChanged();
 			}
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_users_point", DbType="Int")]
-	public System.Nullable<int> users_point
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_groupuser_id", DbType="Int")]
+	public System.Nullable<int> groupuser_id
 	{
 		get
 		{
-			return this._users_point;
+			return this._groupuser_id;
 		}
 		set
 		{
-			if ((this._users_point != value))
+			if ((this._groupuser_id != value))
 			{
-				this.Onusers_pointChanging(value);
+				this.Ongroupuser_idChanging(value);
 				this.SendPropertyChanging();
-				this._users_point = value;
-				this.SendPropertyChanged("users_point");
-				this.Onusers_pointChanged();
+				this._groupuser_id = value;
+				this.SendPropertyChanged("groupuser_id");
+				this.Ongroupuser_idChanged();
 			}
 		}
 	}
@@ -1457,1380 +1358,6 @@ public partial class admin_Module : INotifyPropertyChanging, INotifyPropertyChan
 				this._module_active = value;
 				this.SendPropertyChanged("module_active");
 				this.Onmodule_activeChanged();
-			}
-		}
-	}
-	
-	public event PropertyChangingEventHandler PropertyChanging;
-	
-	public event PropertyChangedEventHandler PropertyChanged;
-	
-	protected virtual void SendPropertyChanging()
-	{
-		if ((this.PropertyChanging != null))
-		{
-			this.PropertyChanging(this, emptyChangingEventArgs);
-		}
-	}
-	
-	protected virtual void SendPropertyChanged(String propertyName)
-	{
-		if ((this.PropertyChanged != null))
-		{
-			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-		}
-	}
-}
-
-[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.admin_User")]
-public partial class admin_User : INotifyPropertyChanging, INotifyPropertyChanged
-{
-	
-	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-	
-	private int _username_id;
-	
-	private string _username_username;
-	
-	private string _username_password;
-	
-	private string _username_fullname;
-	
-	private System.Nullable<bool> _username_gender;
-	
-	private string _username_phone;
-	
-	private string _username_email;
-	
-	private System.Nullable<bool> _username_active;
-	
-	private System.Nullable<int> _groupuser_id;
-	
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onusername_idChanging(int value);
-    partial void Onusername_idChanged();
-    partial void Onusername_usernameChanging(string value);
-    partial void Onusername_usernameChanged();
-    partial void Onusername_passwordChanging(string value);
-    partial void Onusername_passwordChanged();
-    partial void Onusername_fullnameChanging(string value);
-    partial void Onusername_fullnameChanged();
-    partial void Onusername_genderChanging(System.Nullable<bool> value);
-    partial void Onusername_genderChanged();
-    partial void Onusername_phoneChanging(string value);
-    partial void Onusername_phoneChanged();
-    partial void Onusername_emailChanging(string value);
-    partial void Onusername_emailChanged();
-    partial void Onusername_activeChanging(System.Nullable<bool> value);
-    partial void Onusername_activeChanged();
-    partial void Ongroupuser_idChanging(System.Nullable<int> value);
-    partial void Ongroupuser_idChanged();
-    #endregion
-	
-	public admin_User()
-	{
-		OnCreated();
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_username_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-	public int username_id
-	{
-		get
-		{
-			return this._username_id;
-		}
-		set
-		{
-			if ((this._username_id != value))
-			{
-				this.Onusername_idChanging(value);
-				this.SendPropertyChanging();
-				this._username_id = value;
-				this.SendPropertyChanged("username_id");
-				this.Onusername_idChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_username_username", DbType="NVarChar(MAX)")]
-	public string username_username
-	{
-		get
-		{
-			return this._username_username;
-		}
-		set
-		{
-			if ((this._username_username != value))
-			{
-				this.Onusername_usernameChanging(value);
-				this.SendPropertyChanging();
-				this._username_username = value;
-				this.SendPropertyChanged("username_username");
-				this.Onusername_usernameChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_username_password", DbType="NVarChar(MAX)")]
-	public string username_password
-	{
-		get
-		{
-			return this._username_password;
-		}
-		set
-		{
-			if ((this._username_password != value))
-			{
-				this.Onusername_passwordChanging(value);
-				this.SendPropertyChanging();
-				this._username_password = value;
-				this.SendPropertyChanged("username_password");
-				this.Onusername_passwordChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_username_fullname", DbType="NVarChar(MAX)")]
-	public string username_fullname
-	{
-		get
-		{
-			return this._username_fullname;
-		}
-		set
-		{
-			if ((this._username_fullname != value))
-			{
-				this.Onusername_fullnameChanging(value);
-				this.SendPropertyChanging();
-				this._username_fullname = value;
-				this.SendPropertyChanged("username_fullname");
-				this.Onusername_fullnameChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_username_gender", DbType="Bit")]
-	public System.Nullable<bool> username_gender
-	{
-		get
-		{
-			return this._username_gender;
-		}
-		set
-		{
-			if ((this._username_gender != value))
-			{
-				this.Onusername_genderChanging(value);
-				this.SendPropertyChanging();
-				this._username_gender = value;
-				this.SendPropertyChanged("username_gender");
-				this.Onusername_genderChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_username_phone", DbType="NVarChar(MAX)")]
-	public string username_phone
-	{
-		get
-		{
-			return this._username_phone;
-		}
-		set
-		{
-			if ((this._username_phone != value))
-			{
-				this.Onusername_phoneChanging(value);
-				this.SendPropertyChanging();
-				this._username_phone = value;
-				this.SendPropertyChanged("username_phone");
-				this.Onusername_phoneChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_username_email", DbType="NVarChar(MAX)")]
-	public string username_email
-	{
-		get
-		{
-			return this._username_email;
-		}
-		set
-		{
-			if ((this._username_email != value))
-			{
-				this.Onusername_emailChanging(value);
-				this.SendPropertyChanging();
-				this._username_email = value;
-				this.SendPropertyChanged("username_email");
-				this.Onusername_emailChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_username_active", DbType="Bit")]
-	public System.Nullable<bool> username_active
-	{
-		get
-		{
-			return this._username_active;
-		}
-		set
-		{
-			if ((this._username_active != value))
-			{
-				this.Onusername_activeChanging(value);
-				this.SendPropertyChanging();
-				this._username_active = value;
-				this.SendPropertyChanged("username_active");
-				this.Onusername_activeChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_groupuser_id", DbType="Int")]
-	public System.Nullable<int> groupuser_id
-	{
-		get
-		{
-			return this._groupuser_id;
-		}
-		set
-		{
-			if ((this._groupuser_id != value))
-			{
-				this.Ongroupuser_idChanging(value);
-				this.SendPropertyChanging();
-				this._groupuser_id = value;
-				this.SendPropertyChanged("groupuser_id");
-				this.Ongroupuser_idChanged();
-			}
-		}
-	}
-	
-	public event PropertyChangingEventHandler PropertyChanging;
-	
-	public event PropertyChangedEventHandler PropertyChanged;
-	
-	protected virtual void SendPropertyChanging()
-	{
-		if ((this.PropertyChanging != null))
-		{
-			this.PropertyChanging(this, emptyChangingEventArgs);
-		}
-	}
-	
-	protected virtual void SendPropertyChanged(String propertyName)
-	{
-		if ((this.PropertyChanged != null))
-		{
-			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-		}
-	}
-}
-
-[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tb_DetailedInvoice")]
-public partial class tb_DetailedInvoice : INotifyPropertyChanging, INotifyPropertyChanged
-{
-	
-	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-	
-	private int _di_id;
-	
-	private System.Nullable<int> _invoice_id;
-	
-	private System.Nullable<int> _pr_id;
-	
-	private System.Nullable<int> _di_currentPrice;
-	
-	private System.Nullable<int> _di_discount;
-	
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Ondi_idChanging(int value);
-    partial void Ondi_idChanged();
-    partial void Oninvoice_idChanging(System.Nullable<int> value);
-    partial void Oninvoice_idChanged();
-    partial void Onpr_idChanging(System.Nullable<int> value);
-    partial void Onpr_idChanged();
-    partial void Ondi_currentPriceChanging(System.Nullable<int> value);
-    partial void Ondi_currentPriceChanged();
-    partial void Ondi_discountChanging(System.Nullable<int> value);
-    partial void Ondi_discountChanged();
-    #endregion
-	
-	public tb_DetailedInvoice()
-	{
-		OnCreated();
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_di_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-	public int di_id
-	{
-		get
-		{
-			return this._di_id;
-		}
-		set
-		{
-			if ((this._di_id != value))
-			{
-				this.Ondi_idChanging(value);
-				this.SendPropertyChanging();
-				this._di_id = value;
-				this.SendPropertyChanged("di_id");
-				this.Ondi_idChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_invoice_id", DbType="Int")]
-	public System.Nullable<int> invoice_id
-	{
-		get
-		{
-			return this._invoice_id;
-		}
-		set
-		{
-			if ((this._invoice_id != value))
-			{
-				this.Oninvoice_idChanging(value);
-				this.SendPropertyChanging();
-				this._invoice_id = value;
-				this.SendPropertyChanged("invoice_id");
-				this.Oninvoice_idChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pr_id", DbType="Int")]
-	public System.Nullable<int> pr_id
-	{
-		get
-		{
-			return this._pr_id;
-		}
-		set
-		{
-			if ((this._pr_id != value))
-			{
-				this.Onpr_idChanging(value);
-				this.SendPropertyChanging();
-				this._pr_id = value;
-				this.SendPropertyChanged("pr_id");
-				this.Onpr_idChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_di_currentPrice", DbType="Int")]
-	public System.Nullable<int> di_currentPrice
-	{
-		get
-		{
-			return this._di_currentPrice;
-		}
-		set
-		{
-			if ((this._di_currentPrice != value))
-			{
-				this.Ondi_currentPriceChanging(value);
-				this.SendPropertyChanging();
-				this._di_currentPrice = value;
-				this.SendPropertyChanged("di_currentPrice");
-				this.Ondi_currentPriceChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_di_discount", DbType="Int")]
-	public System.Nullable<int> di_discount
-	{
-		get
-		{
-			return this._di_discount;
-		}
-		set
-		{
-			if ((this._di_discount != value))
-			{
-				this.Ondi_discountChanging(value);
-				this.SendPropertyChanging();
-				this._di_discount = value;
-				this.SendPropertyChanged("di_discount");
-				this.Ondi_discountChanged();
-			}
-		}
-	}
-	
-	public event PropertyChangingEventHandler PropertyChanging;
-	
-	public event PropertyChangedEventHandler PropertyChanged;
-	
-	protected virtual void SendPropertyChanging()
-	{
-		if ((this.PropertyChanging != null))
-		{
-			this.PropertyChanging(this, emptyChangingEventArgs);
-		}
-	}
-	
-	protected virtual void SendPropertyChanged(String propertyName)
-	{
-		if ((this.PropertyChanged != null))
-		{
-			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-		}
-	}
-}
-
-[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tb_DetailedPromotions")]
-public partial class tb_DetailedPromotion : INotifyPropertyChanging, INotifyPropertyChanged
-{
-	
-	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-	
-	private int _dpr_id;
-	
-	private System.Nullable<int> _promotion_id;
-	
-	private System.Nullable<int> _pr_id;
-	
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Ondpr_idChanging(int value);
-    partial void Ondpr_idChanged();
-    partial void Onpromotion_idChanging(System.Nullable<int> value);
-    partial void Onpromotion_idChanged();
-    partial void Onpr_idChanging(System.Nullable<int> value);
-    partial void Onpr_idChanged();
-    #endregion
-	
-	public tb_DetailedPromotion()
-	{
-		OnCreated();
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_dpr_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-	public int dpr_id
-	{
-		get
-		{
-			return this._dpr_id;
-		}
-		set
-		{
-			if ((this._dpr_id != value))
-			{
-				this.Ondpr_idChanging(value);
-				this.SendPropertyChanging();
-				this._dpr_id = value;
-				this.SendPropertyChanged("dpr_id");
-				this.Ondpr_idChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_promotion_id", DbType="Int")]
-	public System.Nullable<int> promotion_id
-	{
-		get
-		{
-			return this._promotion_id;
-		}
-		set
-		{
-			if ((this._promotion_id != value))
-			{
-				this.Onpromotion_idChanging(value);
-				this.SendPropertyChanging();
-				this._promotion_id = value;
-				this.SendPropertyChanged("promotion_id");
-				this.Onpromotion_idChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pr_id", DbType="Int")]
-	public System.Nullable<int> pr_id
-	{
-		get
-		{
-			return this._pr_id;
-		}
-		set
-		{
-			if ((this._pr_id != value))
-			{
-				this.Onpr_idChanging(value);
-				this.SendPropertyChanging();
-				this._pr_id = value;
-				this.SendPropertyChanged("pr_id");
-				this.Onpr_idChanged();
-			}
-		}
-	}
-	
-	public event PropertyChangingEventHandler PropertyChanging;
-	
-	public event PropertyChangedEventHandler PropertyChanged;
-	
-	protected virtual void SendPropertyChanging()
-	{
-		if ((this.PropertyChanging != null))
-		{
-			this.PropertyChanging(this, emptyChangingEventArgs);
-		}
-	}
-	
-	protected virtual void SendPropertyChanged(String propertyName)
-	{
-		if ((this.PropertyChanged != null))
-		{
-			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-		}
-	}
-}
-
-[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tb_Evaluate")]
-public partial class tb_Evaluate : INotifyPropertyChanging, INotifyPropertyChanged
-{
-	
-	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-	
-	private int _evaluate_id;
-	
-	private string _evaluate_content;
-	
-	private System.Nullable<System.DateTime> _evaluate_day;
-	
-	private System.Nullable<int> _users_id;
-	
-	private System.Nullable<int> _evaluate_star;
-	
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onevaluate_idChanging(int value);
-    partial void Onevaluate_idChanged();
-    partial void Onevaluate_contentChanging(string value);
-    partial void Onevaluate_contentChanged();
-    partial void Onevaluate_dayChanging(System.Nullable<System.DateTime> value);
-    partial void Onevaluate_dayChanged();
-    partial void Onusers_idChanging(System.Nullable<int> value);
-    partial void Onusers_idChanged();
-    partial void Onevaluate_starChanging(System.Nullable<int> value);
-    partial void Onevaluate_starChanged();
-    #endregion
-	
-	public tb_Evaluate()
-	{
-		OnCreated();
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_evaluate_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-	public int evaluate_id
-	{
-		get
-		{
-			return this._evaluate_id;
-		}
-		set
-		{
-			if ((this._evaluate_id != value))
-			{
-				this.Onevaluate_idChanging(value);
-				this.SendPropertyChanging();
-				this._evaluate_id = value;
-				this.SendPropertyChanged("evaluate_id");
-				this.Onevaluate_idChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_evaluate_content", DbType="NVarChar(MAX)")]
-	public string evaluate_content
-	{
-		get
-		{
-			return this._evaluate_content;
-		}
-		set
-		{
-			if ((this._evaluate_content != value))
-			{
-				this.Onevaluate_contentChanging(value);
-				this.SendPropertyChanging();
-				this._evaluate_content = value;
-				this.SendPropertyChanged("evaluate_content");
-				this.Onevaluate_contentChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_evaluate_day", DbType="DateTime")]
-	public System.Nullable<System.DateTime> evaluate_day
-	{
-		get
-		{
-			return this._evaluate_day;
-		}
-		set
-		{
-			if ((this._evaluate_day != value))
-			{
-				this.Onevaluate_dayChanging(value);
-				this.SendPropertyChanging();
-				this._evaluate_day = value;
-				this.SendPropertyChanged("evaluate_day");
-				this.Onevaluate_dayChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_users_id", DbType="Int")]
-	public System.Nullable<int> users_id
-	{
-		get
-		{
-			return this._users_id;
-		}
-		set
-		{
-			if ((this._users_id != value))
-			{
-				this.Onusers_idChanging(value);
-				this.SendPropertyChanging();
-				this._users_id = value;
-				this.SendPropertyChanged("users_id");
-				this.Onusers_idChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_evaluate_star", DbType="Int")]
-	public System.Nullable<int> evaluate_star
-	{
-		get
-		{
-			return this._evaluate_star;
-		}
-		set
-		{
-			if ((this._evaluate_star != value))
-			{
-				this.Onevaluate_starChanging(value);
-				this.SendPropertyChanging();
-				this._evaluate_star = value;
-				this.SendPropertyChanged("evaluate_star");
-				this.Onevaluate_starChanged();
-			}
-		}
-	}
-	
-	public event PropertyChangingEventHandler PropertyChanging;
-	
-	public event PropertyChangedEventHandler PropertyChanged;
-	
-	protected virtual void SendPropertyChanging()
-	{
-		if ((this.PropertyChanging != null))
-		{
-			this.PropertyChanging(this, emptyChangingEventArgs);
-		}
-	}
-	
-	protected virtual void SendPropertyChanged(String propertyName)
-	{
-		if ((this.PropertyChanged != null))
-		{
-			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-		}
-	}
-}
-
-[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tb_Invoice")]
-public partial class tb_Invoice : INotifyPropertyChanging, INotifyPropertyChanged
-{
-	
-	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-	
-	private int _invoice_id;
-	
-	private System.Nullable<int> _users_id;
-	
-	private System.Nullable<System.DateTime> _invoice_day;
-	
-	private string _invoice_status;
-	
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Oninvoice_idChanging(int value);
-    partial void Oninvoice_idChanged();
-    partial void Onusers_idChanging(System.Nullable<int> value);
-    partial void Onusers_idChanged();
-    partial void Oninvoice_dayChanging(System.Nullable<System.DateTime> value);
-    partial void Oninvoice_dayChanged();
-    partial void Oninvoice_statusChanging(string value);
-    partial void Oninvoice_statusChanged();
-    #endregion
-	
-	public tb_Invoice()
-	{
-		OnCreated();
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_invoice_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-	public int invoice_id
-	{
-		get
-		{
-			return this._invoice_id;
-		}
-		set
-		{
-			if ((this._invoice_id != value))
-			{
-				this.Oninvoice_idChanging(value);
-				this.SendPropertyChanging();
-				this._invoice_id = value;
-				this.SendPropertyChanged("invoice_id");
-				this.Oninvoice_idChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_users_id", DbType="Int")]
-	public System.Nullable<int> users_id
-	{
-		get
-		{
-			return this._users_id;
-		}
-		set
-		{
-			if ((this._users_id != value))
-			{
-				this.Onusers_idChanging(value);
-				this.SendPropertyChanging();
-				this._users_id = value;
-				this.SendPropertyChanged("users_id");
-				this.Onusers_idChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_invoice_day", DbType="DateTime")]
-	public System.Nullable<System.DateTime> invoice_day
-	{
-		get
-		{
-			return this._invoice_day;
-		}
-		set
-		{
-			if ((this._invoice_day != value))
-			{
-				this.Oninvoice_dayChanging(value);
-				this.SendPropertyChanging();
-				this._invoice_day = value;
-				this.SendPropertyChanged("invoice_day");
-				this.Oninvoice_dayChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_invoice_status", DbType="NVarChar(MAX)")]
-	public string invoice_status
-	{
-		get
-		{
-			return this._invoice_status;
-		}
-		set
-		{
-			if ((this._invoice_status != value))
-			{
-				this.Oninvoice_statusChanging(value);
-				this.SendPropertyChanging();
-				this._invoice_status = value;
-				this.SendPropertyChanged("invoice_status");
-				this.Oninvoice_statusChanged();
-			}
-		}
-	}
-	
-	public event PropertyChangingEventHandler PropertyChanging;
-	
-	public event PropertyChangedEventHandler PropertyChanged;
-	
-	protected virtual void SendPropertyChanging()
-	{
-		if ((this.PropertyChanging != null))
-		{
-			this.PropertyChanging(this, emptyChangingEventArgs);
-		}
-	}
-	
-	protected virtual void SendPropertyChanged(String propertyName)
-	{
-		if ((this.PropertyChanged != null))
-		{
-			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-		}
-	}
-}
-
-[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tb_Product")]
-public partial class tb_Product : INotifyPropertyChanging, INotifyPropertyChanged
-{
-	
-	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-	
-	private int _pr_id;
-	
-	private string _pr_name;
-	
-	private System.Nullable<int> _pr_price;
-	
-	private string _pr_image;
-	
-	private string _pr_describe;
-	
-	private System.Nullable<bool> _pr_status;
-	
-	private System.Nullable<int> _prc_id;
-	
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onpr_idChanging(int value);
-    partial void Onpr_idChanged();
-    partial void Onpr_nameChanging(string value);
-    partial void Onpr_nameChanged();
-    partial void Onpr_priceChanging(System.Nullable<int> value);
-    partial void Onpr_priceChanged();
-    partial void Onpr_imageChanging(string value);
-    partial void Onpr_imageChanged();
-    partial void Onpr_describeChanging(string value);
-    partial void Onpr_describeChanged();
-    partial void Onpr_statusChanging(System.Nullable<bool> value);
-    partial void Onpr_statusChanged();
-    partial void Onprc_idChanging(System.Nullable<int> value);
-    partial void Onprc_idChanged();
-    #endregion
-	
-	public tb_Product()
-	{
-		OnCreated();
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pr_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-	public int pr_id
-	{
-		get
-		{
-			return this._pr_id;
-		}
-		set
-		{
-			if ((this._pr_id != value))
-			{
-				this.Onpr_idChanging(value);
-				this.SendPropertyChanging();
-				this._pr_id = value;
-				this.SendPropertyChanged("pr_id");
-				this.Onpr_idChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pr_name", DbType="NVarChar(MAX)")]
-	public string pr_name
-	{
-		get
-		{
-			return this._pr_name;
-		}
-		set
-		{
-			if ((this._pr_name != value))
-			{
-				this.Onpr_nameChanging(value);
-				this.SendPropertyChanging();
-				this._pr_name = value;
-				this.SendPropertyChanged("pr_name");
-				this.Onpr_nameChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pr_price", DbType="Int")]
-	public System.Nullable<int> pr_price
-	{
-		get
-		{
-			return this._pr_price;
-		}
-		set
-		{
-			if ((this._pr_price != value))
-			{
-				this.Onpr_priceChanging(value);
-				this.SendPropertyChanging();
-				this._pr_price = value;
-				this.SendPropertyChanged("pr_price");
-				this.Onpr_priceChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pr_image", DbType="NVarChar(MAX)")]
-	public string pr_image
-	{
-		get
-		{
-			return this._pr_image;
-		}
-		set
-		{
-			if ((this._pr_image != value))
-			{
-				this.Onpr_imageChanging(value);
-				this.SendPropertyChanging();
-				this._pr_image = value;
-				this.SendPropertyChanged("pr_image");
-				this.Onpr_imageChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pr_describe", DbType="NVarChar(MAX)")]
-	public string pr_describe
-	{
-		get
-		{
-			return this._pr_describe;
-		}
-		set
-		{
-			if ((this._pr_describe != value))
-			{
-				this.Onpr_describeChanging(value);
-				this.SendPropertyChanging();
-				this._pr_describe = value;
-				this.SendPropertyChanged("pr_describe");
-				this.Onpr_describeChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_pr_status", DbType="Bit")]
-	public System.Nullable<bool> pr_status
-	{
-		get
-		{
-			return this._pr_status;
-		}
-		set
-		{
-			if ((this._pr_status != value))
-			{
-				this.Onpr_statusChanging(value);
-				this.SendPropertyChanging();
-				this._pr_status = value;
-				this.SendPropertyChanged("pr_status");
-				this.Onpr_statusChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prc_id", DbType="Int")]
-	public System.Nullable<int> prc_id
-	{
-		get
-		{
-			return this._prc_id;
-		}
-		set
-		{
-			if ((this._prc_id != value))
-			{
-				this.Onprc_idChanging(value);
-				this.SendPropertyChanging();
-				this._prc_id = value;
-				this.SendPropertyChanged("prc_id");
-				this.Onprc_idChanged();
-			}
-		}
-	}
-	
-	public event PropertyChangingEventHandler PropertyChanging;
-	
-	public event PropertyChangedEventHandler PropertyChanged;
-	
-	protected virtual void SendPropertyChanging()
-	{
-		if ((this.PropertyChanging != null))
-		{
-			this.PropertyChanging(this, emptyChangingEventArgs);
-		}
-	}
-	
-	protected virtual void SendPropertyChanged(String propertyName)
-	{
-		if ((this.PropertyChanged != null))
-		{
-			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-		}
-	}
-}
-
-[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tb_ProductCategory")]
-public partial class tb_ProductCategory : INotifyPropertyChanging, INotifyPropertyChanged
-{
-	
-	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-	
-	private int _prc_id;
-	
-	private string _prc_name;
-	
-	private System.Nullable<int> _prt_id;
-	
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onprc_idChanging(int value);
-    partial void Onprc_idChanged();
-    partial void Onprc_nameChanging(string value);
-    partial void Onprc_nameChanged();
-    partial void Onprt_idChanging(System.Nullable<int> value);
-    partial void Onprt_idChanged();
-    #endregion
-	
-	public tb_ProductCategory()
-	{
-		OnCreated();
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prc_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-	public int prc_id
-	{
-		get
-		{
-			return this._prc_id;
-		}
-		set
-		{
-			if ((this._prc_id != value))
-			{
-				this.Onprc_idChanging(value);
-				this.SendPropertyChanging();
-				this._prc_id = value;
-				this.SendPropertyChanged("prc_id");
-				this.Onprc_idChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prc_name", DbType="NVarChar(MAX)")]
-	public string prc_name
-	{
-		get
-		{
-			return this._prc_name;
-		}
-		set
-		{
-			if ((this._prc_name != value))
-			{
-				this.Onprc_nameChanging(value);
-				this.SendPropertyChanging();
-				this._prc_name = value;
-				this.SendPropertyChanged("prc_name");
-				this.Onprc_nameChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prt_id", DbType="Int")]
-	public System.Nullable<int> prt_id
-	{
-		get
-		{
-			return this._prt_id;
-		}
-		set
-		{
-			if ((this._prt_id != value))
-			{
-				this.Onprt_idChanging(value);
-				this.SendPropertyChanging();
-				this._prt_id = value;
-				this.SendPropertyChanged("prt_id");
-				this.Onprt_idChanged();
-			}
-		}
-	}
-	
-	public event PropertyChangingEventHandler PropertyChanging;
-	
-	public event PropertyChangedEventHandler PropertyChanged;
-	
-	protected virtual void SendPropertyChanging()
-	{
-		if ((this.PropertyChanging != null))
-		{
-			this.PropertyChanging(this, emptyChangingEventArgs);
-		}
-	}
-	
-	protected virtual void SendPropertyChanged(String propertyName)
-	{
-		if ((this.PropertyChanged != null))
-		{
-			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-		}
-	}
-}
-
-[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tb_ProductType")]
-public partial class tb_ProductType : INotifyPropertyChanging, INotifyPropertyChanged
-{
-	
-	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-	
-	private int _prt_id;
-	
-	private string _prt_name;
-	
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onprt_idChanging(int value);
-    partial void Onprt_idChanged();
-    partial void Onprt_nameChanging(string value);
-    partial void Onprt_nameChanged();
-    #endregion
-	
-	public tb_ProductType()
-	{
-		OnCreated();
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prt_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-	public int prt_id
-	{
-		get
-		{
-			return this._prt_id;
-		}
-		set
-		{
-			if ((this._prt_id != value))
-			{
-				this.Onprt_idChanging(value);
-				this.SendPropertyChanging();
-				this._prt_id = value;
-				this.SendPropertyChanged("prt_id");
-				this.Onprt_idChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_prt_name", DbType="NVarChar(MAX)")]
-	public string prt_name
-	{
-		get
-		{
-			return this._prt_name;
-		}
-		set
-		{
-			if ((this._prt_name != value))
-			{
-				this.Onprt_nameChanging(value);
-				this.SendPropertyChanging();
-				this._prt_name = value;
-				this.SendPropertyChanged("prt_name");
-				this.Onprt_nameChanged();
-			}
-		}
-	}
-	
-	public event PropertyChangingEventHandler PropertyChanging;
-	
-	public event PropertyChangedEventHandler PropertyChanged;
-	
-	protected virtual void SendPropertyChanging()
-	{
-		if ((this.PropertyChanging != null))
-		{
-			this.PropertyChanging(this, emptyChangingEventArgs);
-		}
-	}
-	
-	protected virtual void SendPropertyChanged(String propertyName)
-	{
-		if ((this.PropertyChanged != null))
-		{
-			this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-		}
-	}
-}
-
-[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.tb_Promotion")]
-public partial class tb_Promotion : INotifyPropertyChanging, INotifyPropertyChanged
-{
-	
-	private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-	
-	private int _promotion_id;
-	
-	private string _promotion_name;
-	
-	private System.Nullable<System.DateTime> _promotion_begin;
-	
-	private System.Nullable<System.DateTime> _promotion_expired;
-	
-	private System.Nullable<int> _promotion_point;
-	
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void Onpromotion_idChanging(int value);
-    partial void Onpromotion_idChanged();
-    partial void Onpromotion_nameChanging(string value);
-    partial void Onpromotion_nameChanged();
-    partial void Onpromotion_beginChanging(System.Nullable<System.DateTime> value);
-    partial void Onpromotion_beginChanged();
-    partial void Onpromotion_expiredChanging(System.Nullable<System.DateTime> value);
-    partial void Onpromotion_expiredChanged();
-    partial void Onpromotion_pointChanging(System.Nullable<int> value);
-    partial void Onpromotion_pointChanged();
-    #endregion
-	
-	public tb_Promotion()
-	{
-		OnCreated();
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_promotion_id", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
-	public int promotion_id
-	{
-		get
-		{
-			return this._promotion_id;
-		}
-		set
-		{
-			if ((this._promotion_id != value))
-			{
-				this.Onpromotion_idChanging(value);
-				this.SendPropertyChanging();
-				this._promotion_id = value;
-				this.SendPropertyChanged("promotion_id");
-				this.Onpromotion_idChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_promotion_name", DbType="NVarChar(MAX)")]
-	public string promotion_name
-	{
-		get
-		{
-			return this._promotion_name;
-		}
-		set
-		{
-			if ((this._promotion_name != value))
-			{
-				this.Onpromotion_nameChanging(value);
-				this.SendPropertyChanging();
-				this._promotion_name = value;
-				this.SendPropertyChanged("promotion_name");
-				this.Onpromotion_nameChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_promotion_begin", DbType="DateTime")]
-	public System.Nullable<System.DateTime> promotion_begin
-	{
-		get
-		{
-			return this._promotion_begin;
-		}
-		set
-		{
-			if ((this._promotion_begin != value))
-			{
-				this.Onpromotion_beginChanging(value);
-				this.SendPropertyChanging();
-				this._promotion_begin = value;
-				this.SendPropertyChanged("promotion_begin");
-				this.Onpromotion_beginChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_promotion_expired", DbType="DateTime")]
-	public System.Nullable<System.DateTime> promotion_expired
-	{
-		get
-		{
-			return this._promotion_expired;
-		}
-		set
-		{
-			if ((this._promotion_expired != value))
-			{
-				this.Onpromotion_expiredChanging(value);
-				this.SendPropertyChanging();
-				this._promotion_expired = value;
-				this.SendPropertyChanged("promotion_expired");
-				this.Onpromotion_expiredChanged();
-			}
-		}
-	}
-	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_promotion_point", DbType="Int")]
-	public System.Nullable<int> promotion_point
-	{
-		get
-		{
-			return this._promotion_point;
-		}
-		set
-		{
-			if ((this._promotion_point != value))
-			{
-				this.Onpromotion_pointChanging(value);
-				this.SendPropertyChanging();
-				this._promotion_point = value;
-				this.SendPropertyChanged("promotion_point");
-				this.Onpromotion_pointChanged();
 			}
 		}
 	}
