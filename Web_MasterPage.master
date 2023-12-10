@@ -29,7 +29,7 @@
     </asp:ContentPlaceHolder>
     <style>
         .navbar-nav {
-            font-family: auto;
+            font-family: 'Roboto';
             font-weight: 650;
             font-size: 20px;
         }
@@ -148,9 +148,9 @@
                             <li class="nav-item dropdown">
                                 <a class="nav-link active" href="menu">Thực Đơn</a>
                             </li>
-                            <li class="nav-item">
+                          <%--  <li class="nav-item">
                                 <a class="nav-link active" href="blog">Blog Ẩm Thực</a>
-                            </li>
+                            </li>--%>
                             <li class="nav-item">
                                 <a class="nav-link active" href="lien-he">Liên Hệ</a>
                             </li>
@@ -159,6 +159,9 @@
                             </li>
 
                         </ul>
+                        <div class="user-icon">
+                            <a href="login"><i class="bi bi-people-fill"></i></a>
+                        </div>
                         <div class="cart-icon">
                             <a href="gio-hang">
                                 <i class="fa fa-shopping-cart"></i>

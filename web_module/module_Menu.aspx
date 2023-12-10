@@ -32,10 +32,10 @@
                 <div class="flex-container ">
                     <div class="cell-1-4 mobile-cell-1-2 tab-cell-1-3 b-pro margin-bottom-40">
                         <div>
-                            <a href="/mon-an-choi/khoai-tia-phomai-set-lon-6-vien-.html">
+                            <a href="#">
                                 <img src="../images/Thuc_don/khoai-tia-6-vien.jpg" alt="Khoai Tía Phomai - set lớn ( 6 viên )" width="100%"></a>
                         </div>
-                        <div class="product-name-home"><a href="/mon-an-choi/khoai-tia-phomai-set-lon-6-vien-.html">Khoai Tía Phomai - set lớn ( 6 viên )</a></div>
+                        <div class="product-name-home"><a href="#">Khoai Tía Phomai - set lớn ( 6 viên )</a></div>
                         <div class="product-price-home">75,000 đ</div>
                         <div class="c10"></div>
                         <div align="center"><a class="btn-order-c" href="#"><i class="fa fa-shopping-cart"></i>Đặt món</a></div>
@@ -43,7 +43,7 @@
                     </div>
                     <div class="cell-1-4 mobile-cell-1-2 tab-cell-1-3 b-pro margin-bottom-40">
                         <div>
-                            <a href="/mon-an-choi/khoai-tia-phomai-set-nho-4-vien.html">
+                            <a href="#">
                                 <img src="../images/Thuc_don/khoai-tia--vien.jpg" alt="Khoai Tía Phomai - set nhỏ ( 4 viên)" width="100%"></a>
                         </div>
                         <div class="product-name-home"><a href="/mon-an-choi/khoai-tia-phomai-set-nho-4-vien.html">Khoai Tía Phomai - set nhỏ ( 4 viên)</a></div>
@@ -54,7 +54,7 @@
                     </div>
                     <div class="cell-1-4 mobile-cell-1-2 tab-cell-1-3 b-pro margin-bottom-40">
                         <div>
-                            <a href="/thuc-don/nem-chua-phomai-set-lon-6-vien-.html">
+                            <a href="#">
                                 <img src="../images/Thuc_don/nem-chua-pho-mai-6v.jpg" alt="Nem Chua Phomai - set lớn ( 6 viên )" width="100%"></a>
                         </div>
                         <div class="product-name-home"><a href="#">Nem Chua Phomai - set lớn ( 6 viên )</a></div>
@@ -65,7 +65,7 @@
                     </div>
                     <div class="cell-1-4 mobile-cell-1-2 tab-cell-1-3 b-pro margin-bottom-40">
                         <div>
-                            <a href="/thuc-don/nem-chua-phomai-set-nho-4-vien-.html">
+                            <a href="#">
                                 <img src="../images/Thuc_don/nem-chua-pho-mai-4v.jpg" alt="Nem Chua Phomai - set nhỏ (4 viên )" width="100%"></a>
                         </div>
                         <div class="product-name-home"><a href="/thuc-don/nem-chua-phomai-set-nho-4-vien-.html">Nem Chua Phomai - set nhỏ (4 viên )</a></div>
