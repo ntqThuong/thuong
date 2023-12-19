@@ -11,8 +11,9 @@
     <link rel="stylesheet" type="text/css" href="../css/font.css" />
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <link href="css/grid.css" rel="stylesheet" />
-    <script src="../css/jquery.min.js"></script>
-    <script src="../css/swiper.min.js"></script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
     <link href="css/font-awesome.css" rel="stylesheet" />
     <link href="css/hover.css" rel="stylesheet" />
     <link href="css/jquery-ui.min.css" rel="stylesheet" />
@@ -147,8 +148,14 @@
                             </li>
                             <li class="nav-item dropdown">
                                 <a class="nav-link active" href="menu">Thực Đơn</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Bún Bò Huế</a></li>
+                                    <li><a class="dropdown-item" href="#">Cơm Huế</a></li>
+                                    <li><a class="dropdown-item" href="#">Cháo Huế</a></li>
+                                    <li><a class="dropdown-item" href="#">Bánh Huế</a></li>
+                                </ul>
                             </li>
-                          <%--  <li class="nav-item">
+                            <%--  <li class="nav-item">
                                 <a class="nav-link active" href="blog">Blog Ẩm Thực</a>
                             </li>--%>
                             <li class="nav-item">
