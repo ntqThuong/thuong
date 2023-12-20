@@ -28,8 +28,7 @@ public class webui
         list.Add("webUuDai|uu-dai|~/web_module/module_UuDai.aspx");
         //menu
         list.Add("webmenu|Menu|~/web_module/module_Menu.aspx");
-        list.Add("webBunHue|bun-hue|~/web_module/module_BunHue.aspx");
-        list.Add("webBunBoDacBiet|bun-bo-dac-biet|~/web_module/module_BunBoDacBiet.aspx");
+        list.Add("webthucdon|bun-hue|~/web_module/module_BunHue.aspx");
         //blog
         list.Add("webBlog|blog|~/web_module/module_Blog.aspx");
 
@@ -40,10 +39,8 @@ public class webui
         //giỏ hàng
         list.Add("webgiohang|gio-hang|~/web_module/module_GioHang.aspx");
         //bai viết
-        list.Add("webTinTuc|tin-tuc|~/web_module/module_TinTuc.aspx");
-        //Hethong
-        list.Add("webHeThongNhaHang|he-thong|~/web_module/module-HeThongCuaHang.aspx");
-        list.Add("webNetHueHangBong|hang-bong|~/web_module/module_NetHueHangBong.aspx");
+        list.Add("webBaiViet|bai-viet|~/web_module/module_BaiViet.aspx");
+
         return list;
 
     }

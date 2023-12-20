@@ -18,26 +18,17 @@ public class adminmodule
     public List<string> UrlRoutes()
     {
         List<string> list = new List<string>();
-        ////Module SEO
-        //list.Add("moduleseo|admin-seo|~/admin_page/module_function/module_SEO.aspx");
-        ////Module Language
-        //list.Add("modulelanguage|admin-ngon-ngu|~/admin_page/module_function/admin_LanguagePage.aspx");
-        ////list.Add("moduleaccount|admin-accounths|~/admin_page/module_function/module_Account.aspx");
-        ////Admin xác nhận
-        //list.Add("moduleadminxacnhan|admin-xac-nhan|~/admin_page/module_function/module_AdminXacNhan.aspx");
-        ////Admin Slide
-        //list.Add("moduleadminslide|admin-slide|~/admin_page/module_function/module_QuanLySlides/module_Slide.aspx");
-        ////Admin Dịch Vụ
-        //list.Add("moduleadmindichvu|admin-dich-vu|~/admin_page/module_function/module_QuanLyDichVu/module_DichVu.aspx");
-        ////Admin bài viết
-        //list.Add("moduleadminquanlybaivietkhachsan|admin-quan-ly-bai-viet-khach-san|~/admin_page/module_function/module_QuanLyBaiViet/module_QuanLyBaiVietKhachSan.aspx");
-        //list.Add("moduleadminquanlybaivietcaphe|admin-quan-ly-bai-viet-ca-phe|~/admin_page/module_function/module_QuanLyBaiViet/module_QuanLyBaiVietCaPhe.aspx");
-        //list.Add("moduleadminquanlybaivietdiemdulich|admin-quan-ly-bai-viet-diem-du-lich|~/admin_page/module_function/module_QuanLyBaiViet/module_QuanLyBaiVietDiemDuLich.aspx");
-        ////Admin tài khoảng tài xế
-        //list.Add("moduleadmintaikhoangtaixe|admin-tai-khoang-tai-xe|~/admin_page/module_function/module_TaiKhoanTaiXe.aspx");
-
-        list.Add("moduleadminquanlysanpham|admin-quan-ly-san-pham|~/admin_page/module_function/module_QuanLySanPham.aspx");
-
+        // Quản lý sản phẩm
+        list.Add("moduleadminquanlynhomsanpham|admin-quan-ly-nhom-san-pham|~/admin_page/module_function/module_QuanLySanPham/admin_QuanLyNhomSanPham.aspx");
+        list.Add("moduleadminquanlysanpham|admin-quan-ly-san-pham|~/admin_page/module_function/module_QuanLySanPham/admin_QuanLySanPham.aspx");
+        // Quản lý hệ thống
+        list.Add("moduleadminquanlyhethong|admin-address|~/admin_page/module_function/admin_QuanLyHeThong.aspx");
+        // Quản lý Website
+        list.Add("moduleadmintraikhoangkhachhang|admin-account-user|~/admin_page/module_function/module_QuanLyWebsite/admin_TaiKhoangKhachHang.aspx");
+        // Quản lý Đơn Hàng
+        list.Add("moduleadminquanlydatban|admin-book|~/admin_page/module_function/module_QuanLyDonHang/admin_QuanLyDatBan.aspx");
+        list.Add("moduleadminquanlydonhang|admin-order|~/admin_page/module_function/module_QuanLyDonHang/admin_QuanLyDonHang.aspx");
+        list.Add("moduleadminquanlythongke|admin-statistical|~/admin_page/module_function/module_QuanLyDonHang/admin_QuanLyThongKe.aspx");
         return list;
     }
 }

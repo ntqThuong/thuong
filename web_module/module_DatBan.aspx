@@ -28,64 +28,63 @@
         <div class="flex-container">
             <div class="cell-1-2 mobile-cell-1-1 tab-cell-1-1">
                 <div style="max-width: 520px; margin: 0 auto">
-                    <img src="/images/img-datban.png" style="max-width: 100%"></div>
+                    <img src="/images/img-datban.png" style="max-width: 100%">
+                </div>
             </div>
             <div class="cell-1-2">
                 <div class="box-form-datban">
-                    <form method="post" action="" id="orderfrm" data-alert="Bạn cần nhập đủ thông tin vào những trường màu đỏ">
-                        <input type="hidden" name="ordersubmit" value="1">
-                        <div class="flex-container">
-                            <div class="cell-1-2">
-                                <div class="item">
-                                    Họ tên
-                                <input name="fullname" class="notNull" placeholder="Họ tên" type="text">
-                                </div>
-                                <div class="item">
-                                    Email
-                                <input name="email" type="email" placeholder="Email">
-                                </div>
-                                <div class="item">
-                                    Điện thoại
-                                <input name="phone" class="notNull" type="text" placeholder="Điện thoại">
-                                </div>
-
+                    <input type="hidden" name="ordersubmit" value="1">
+                    <div class="flex-container">
+                        <div class="cell-1-2">
+                            <div class="item">
+                                Họ tên
+                                <input name="fullname" runat="server" id="txtName" class="notNull" placeholder="Họ tên" type="text">
                             </div>
-                            <div class="cell-1-2">
-                                <div class="item">
-                                    Thời gian
+                            <div class="item">
+                                Email
+                                <input name="email" runat="server" id="txtEmail" type="email" placeholder="Email">
+                            </div>
+                            <div class="item">
+                                Điện thoại
+                                <input name="phone" runat="server" id="txtPhone" class="notNull" type="text" placeholder="Điện thoại">
+                            </div>
+                        </div>
+                        <div class="cell-1-2">
+                            <div class="item">
+                                Thời gian
                             	<div class="flex-container">
-                                    <div style="width: 60%">
-                                        <input autocomplete="off" name="ngay" class="notNull" id="date" type="text" placeholder="--Ngày--"></div>
-                                    <div class="cell-1-3" style="width: 35%">
-                                        <input name="gio" type="text" autocomplete="off" class="notNull" id="time" placeholder="--Thời gian--">
+                                    <div style="width: 50%">
+                                        <input type="date" runat="server" id="txtDay" class="notNull" name="name" value="" />
+                                    </div>
+                                    <div class="cell-1-3" style="width: 45%">
+                                        <input type="time" runat="server" id="txtTime" class="notNull" name="name" value="" />
                                     </div>
                                 </div>
-                                </div>
-                                <div class="item">
-                                    Số người
-                            	<input name="soluong" placeholder="Số người" class="notNull" type="number" min="1" max="500">
-                                </div>
-                                <div class="item">
-                                    Nhà hàng
-                            	<select name="nhahang">
-
-                                    <option value="" style="color: #666">-Nhà hàng-</option>
-                                    <option value="Net Hue Vincom Mega Mall Smart City">Net Hue BigC</option>
-                             
-                                </select>
-                                </div>
                             </div>
-                            <div class="cell-1-1">
-                                <textarea name="ghichu" placeholder="Ghi chú"></textarea></div>
-                            <div class="cell-1-1"><a href="#" onclick="$('#orderfrm').submit(); return false">Đặt bàn ngay</a></div>
+                            <div class="item">
+                                Số người
+                            	<input name="soluong" placeholder="Số người" runat="server" id="txtNumber" class="notNull" type="number" min="1" max="500">
+                            </div>
+                            <div class="item">
+                                Nhà hàng
+                            	<select name="nhahang" id="txtHeThong">
+                                    <asp:Repeater runat="server" ID="rpHeThong">
+                                        <ItemTemplate>
+                                            <option value="<%#Eval("re_id") %>"><%#Eval("re_name") %></option>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                </select>
+                            </div>
                         </div>
-                    </form>
+                        <div class="cell-1-1">
+                            <textarea name="ghichu" runat="server" id="txtGhiChu" placeholder="Ghi chú"></textarea>
+                        </div>
+                        <div class="cell-1-1"><a href="javascript:void(0)" id="btnDatBan" runat="server" onserverclick="btnDatBan_ServerClick">Đặt bàn ngay</a></div>
+                    </div>
                 </div>
-
             </div>
         </div>
         <div class="c30"></div>
-     
     </div>
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="ContentPlaceHolder6" runat="Server">

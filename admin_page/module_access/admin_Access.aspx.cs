@@ -16,8 +16,12 @@ public partial class admin_page_module_access_admin_Access : System.Web.UI.Page
     }
     private void loadGroupUser()
     {
-        admin_User logedMember = Session["AdminLogined"] as admin_User;
-        if (logedMember.username_id ==2) {
+        //lấy thông tin của tk đang nhập
+        var getuser = (from u in db.admin_Users
+                       where u.username_username == Request.Cookies["UserName"].Value
+                       select u).FirstOrDefault();
+        //admin_User logedMember = Session["AdminLogined"] as admin_User;
+        if (getuser.username_id ==2) {
             var loadData = from dt in db.admin_GroupUsers
                            where dt.groupuser_id != 1
                            select dt;

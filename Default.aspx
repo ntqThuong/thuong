@@ -17,49 +17,6 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="ContentPlaceHolder3" runat="Server">
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="ContentPlaceHolder4" runat="Server">
-    <%-- <div class="slider-container">
-        <div class="slider">
-            <div class="slide">
-                <img src="images/banner/chao%20hue.jpg" alt="Slide 1">
-            </div>
-            <div class="slide">
-                <img src="images/banner/com%20hue.jpg" alt="Slide 2">
-            </div>
-            <div class="slide">
-                <img src="images/banner/chao%20hue.jpg" alt="Slide 3">
-            </div>
-            <!-- Add more slides as needed -->
-        </div>
-    </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            let currentIndex = 0;
-            const slides = document.querySelectorAll('.slide');
-            const totalSlides = slides.length;
-
-            function showSlide(index) {
-                if (index < 0) {
-                    currentIndex = totalSlides - 1;
-                } else if (index >= totalSlides) {
-                    currentIndex = 0;
-                } else {
-                    currentIndex = index;
-                }
-
-                slides.forEach((slide, i) => {
-                    slide.style.transform = `translateX(${-currentIndex * 100}%)`;
-                });
-            }
-
-            // Auto slide change (optional)
-            setInterval(function () {
-                showSlide(currentIndex + 1);
-            }, 5000); // Change slide every 5 seconds (adjust as needed)
-
-            // You can also add event listeners or controls for manual navigation
-        });
-
-    </script>--%>
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="ContentPlaceHolder5" runat="Server">
     <div id="page " class="site-content">
@@ -205,104 +162,27 @@
             </div>
             <div class="c30"></div>
         </div>
-        <div class="box-ht-cuahang ">
-            <div class="grid">
-                <div class="flex-container flex-center" style="">
 
-                    <div class="cell-list-map mobile-cell-1-1 tab-cell-1-1" style="background: #FFF">
-                        <div class="title-list-map">
-                            <div class="flex-container">
-                                <div class="title-map-text">Hệ thống nhà hàng</div>
+        <script>
+            $(function () {
+                $('.box-list-map .item-map:first').addClass('active');
+                /*$( "#loadmap" ).html('<div class="loading">Đang tải...</div>');
+                $( "#loadmap" ).load( "/index4.php?page=dailymap&id=" + $('.box-list-map .item-map:first').data('id'), function( response, status, xhr ) {
+                  if ( status == "error" ) {}
+                });*/
 
-                            </div>
-                        </div>
-                        <div class="box-list-map">
-                            <div class="item-map active" data-id="16">
-                                <div class="name">Nét Huế Hàng Bông</div>
-                                <table width="100%" border="0" cellspacing="0" cellpadding="5">
-                                    <tbody>
-                                        <tr>
-                                            <td width="15px"><i class="fa fa-map-marker" aria-hidden="true"></i></td>
-                                            <td>Nét Huế 198 Hàng Bông, Q. Hoàn Kiếm, Hà Nội</td>
-                                        </tr>
-                                        <tr>
-                                            <td><i class="fa fa-phone" aria-hidden="true"></i></td>
-                                            <td>Hotline: 024.3938.1795</td>
-                                        </tr>
-                                        <tr>
-                                            <td><i class="fa fa-envelope" aria-hidden="true"></i></td>
-                                            <td>info@nethue.com.vn</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                            </div>
-                            <div class="item-map" data-id="25">
-                                <div class="name">Nét Huế Lạc Trung</div>
-                                <table width="100%" border="0" cellspacing="0" cellpadding="5">
-                                    <tbody>
-                                        <tr>
-                                            <td width="15px"><i class="fa fa-map-marker" aria-hidden="true"></i></td>
-                                            <td>Nét Huế 57 Lạc Trung - Q. Hai Bà Trưng - Hà Nội</td>
-                                        </tr>
-                                        <tr>
-                                            <td><i class="fa fa-phone" aria-hidden="true"></i></td>
-                                            <td>Hotline: 024.3877.5757</td>
-                                        </tr>
-                                        <tr>
-                                            <td><i class="fa fa-envelope" aria-hidden="true"></i></td>
-                                            <td>info@nethue.com.vn</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="item-map" data-id="26">
-                                <div class="name">Nét Huế Times city</div>
-                                <table width="100%" border="0" cellspacing="0" cellpadding="5">
-                                    <tbody>
-                                        <tr>
-                                            <td width="15px"><i class="fa fa-map-marker" aria-hidden="true"></i></td>
-                                            <td>Nét Huế 10 Nguyễn Tri Phương - Q.Thanh Khê - Đà Nẵng</td>
-                                        </tr>
-                                        <tr>
-                                            <td><i class="fa fa-phone" aria-hidden="true"></i></td>
-                                            <td>Hotline: 024.3877.5757</td>
-                                        </tr>
-                                        <tr>
-                                            <td><i class="fa fa-envelope" aria-hidden="true"></i></td>
-                                            <td>info@nethue.com.vn</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <script>
-                    $(function () {
-                        $('.box-list-map .item-map:first').addClass('active');
-                        /*$( "#loadmap" ).html('<div class="loading">Đang tải...</div>');
-                        $( "#loadmap" ).load( "/index4.php?page=dailymap&id=" + $('.box-list-map .item-map:first').data('id'), function( response, status, xhr ) {
-                          if ( status == "error" ) {}
-                        });*/
-
-                        $('.item-map').click(function () {
-                            $('.box-list-map .item-map').removeClass('active');
-                            $(this).addClass('active');
-                            /*$( "#loadmap" ).html('<div class="loading">Đang tải...</div>');
-                            $( "#loadmap" ).load( "/index4.php?page=dailymap&id=" + $(this).data('id'), function( response, status, xhr ) {
-                              if ( status == "error" ) { }
-                            });*/
-                            return false;
-                        })
-                    })
-                </script>
-            </div>
-        </div>
+                $('.item-map').click(function () {
+                    $('.box-list-map .item-map').removeClass('active');
+                    $(this).addClass('active');
+                    /*$( "#loadmap" ).html('<div class="loading">Đang tải...</div>');
+                    $( "#loadmap" ).load( "/index4.php?page=dailymap&id=" + $(this).data('id'), function( response, status, xhr ) {
+                      if ( status == "error" ) { }
+                    });*/
+                    return false;
+                })
+            })
+        </script>
     </div>
-
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="ContentPlaceHolder7" runat="Server">
 </asp:Content>

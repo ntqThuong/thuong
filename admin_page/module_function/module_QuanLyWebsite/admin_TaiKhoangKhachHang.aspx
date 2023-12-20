@@ -1,7 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin_MasterPage.master" AutoEventWireup="true" CodeFile="admin_UserManage.aspx.cs" Inherits="admin_page_module_access_admin_UserManage" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin_MasterPage.master" AutoEventWireup="true" CodeFile="admin_TaiKhoangKhachHang.aspx.cs" Inherits="admin_page_module_access_admin_UserManage" %>
 
 <%@ Register TagPrefix="dx" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v17.1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="headlink" runat="Server">
+    <style>
+        .none{
+            display: none;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="hihead" runat="Server">
 </asp:Content>
@@ -49,30 +54,30 @@
     </script>
     <div class="card card-block">
         <center style="font-size: 50px">
-            <p>Quản lý tài khoảng nhân viên</p>
+            <p>Quản lý tài khoảng khách hàng</p>
         </center>
         <div class="form-group row">
             <div class="col-sm-10">
                 <asp:UpdatePanel ID="udButton" runat="server">
                     <ContentTemplate>
-                        <asp:Button ID="btnThem" runat="server" Text="Thêm" CssClass="btn btn-primary " OnClick="btnThem_Click" />
-                        <asp:Button ID="btnChiTiet" runat="server" Text="Chi tiết" CssClass="btn btn-primary" OnClick="btnChiTiet_Click" />
-                        <input type="submit" class="btn btn-primary " value="Xóa" onclick="confirmDel()" />
+                        <asp:Button ID="btnThem" runat="server" Text="Thêm" CssClass="btn btn-primary none" OnClick="btnThem_Click" />
+                        <asp:Button ID="btnChiTiet" runat="server" Text="Chi tiết" CssClass="btn btn-primary none" OnClick="btnChiTiet_Click" />
+                        <input type="submit" class="btn btn-primary " value="Khoá / Mở tài khoảng" onclick="confirmDel()" />
                         <asp:Button ID="btnXoa" runat="server" CssClass="invisible" OnClick="btnXoa_Click" />
                     </ContentTemplate>
                 </asp:UpdatePanel>
             </div>
         </div>
         <div class="form-group table-responsive">
-            <dx:ASPxGridView ID="grvList" runat="server" ClientInstanceName="grvList" KeyFieldName="username_id" Width="100%">
+            <dx:ASPxGridView ID="grvList" runat="server" ClientInstanceName="grvList" KeyFieldName="us_id" Width="100%">
                 <Columns>
                     <dx:GridViewCommandColumn ShowSelectCheckbox="True" SelectAllCheckboxMode="Page" VisibleIndex="0" Width="2%">
                     </dx:GridViewCommandColumn>
-                    <dx:GridViewDataColumn Caption="Họ tên" FieldName="username_fullname" HeaderStyle-HorizontalAlign="Center" Width="15%"></dx:GridViewDataColumn>
-                    <dx:GridViewDataColumn Caption="Bộ phận" FieldName="groupuser_name" HeaderStyle-HorizontalAlign="Center" Width="15%"></dx:GridViewDataColumn>
-                    <dx:GridViewDataColumn Caption="Email" FieldName="username_email" HeaderStyle-HorizontalAlign="Center" Width="20%"></dx:GridViewDataColumn>
-                    <dx:GridViewDataColumn Caption="Số điện thoại" FieldName="username_phone" HeaderStyle-HorizontalAlign="Center" Width="10%"></dx:GridViewDataColumn>
-                    <dx:GridViewDataColumn Caption="Tài khoản" FieldName="username_username" HeaderStyle-HorizontalAlign="Center" Width="10%"></dx:GridViewDataColumn>
+                    <dx:GridViewDataColumn Caption="Họ tên" FieldName="us_name" HeaderStyle-HorizontalAlign="Center" Width="15%"></dx:GridViewDataColumn>
+                    <dx:GridViewDataColumn Caption="Email" FieldName="us_email" HeaderStyle-HorizontalAlign="Center" Width="20%"></dx:GridViewDataColumn>
+                    <dx:GridViewDataColumn Caption="Số điện thoại" FieldName="us_phone" HeaderStyle-HorizontalAlign="Center" Width="10%"></dx:GridViewDataColumn>
+                    <dx:GridViewDataColumn Caption="Địa chỉ" FieldName="us_address" HeaderStyle-HorizontalAlign="Center" Width="10%"></dx:GridViewDataColumn>
+                    <dx:GridViewDataColumn Caption="Tình Trạng" FieldName="us_acti" HeaderStyle-HorizontalAlign="Center" Width="10%"></dx:GridViewDataColumn>
                 </Columns>
                 <ClientSideEvents RowDblClick="btnChiTiet" />
                 <SettingsSearchPanel Visible="true" />

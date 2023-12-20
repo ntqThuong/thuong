@@ -10,6 +10,10 @@ public partial class admin_page_module_access_admin_Login : System.Web.UI.Page
     dbcsdlDataContext db = new dbcsdlDataContext();
     protected void Page_Load(object sender, EventArgs e)
     {
+        //if (Session["AdminLogined"] != null)
+        //{
+        //    Response.Redirect("/Admin_Default.aspx");
+        //}
         if (!IsPostBack)
         {
             if (Request.Cookies["UserName"] != null)
@@ -24,10 +28,11 @@ public partial class admin_page_module_access_admin_Login : System.Web.UI.Page
         string passmd5 = md5.HashCode(txtPassword.Value);
         string userName = txtUser.Value.Trim();
         var viewUserName = from tb in db.admin_Users
-                           where tb.username_username == userName.ToLower() 
-                           && tb.username_password == passmd5 
+                           where tb.username_username == userName.ToLower()
+                           && tb.username_password == passmd5
                            && tb.username_active == true
                            select tb;
+
         if (viewUserName.Count() > 0)
         {
             admin_User list = viewUserName.Single();

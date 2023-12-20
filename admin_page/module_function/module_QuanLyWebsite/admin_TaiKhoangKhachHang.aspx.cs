@@ -36,19 +36,8 @@ public partial class admin_page_module_access_admin_UserManage : System.Web.UI.P
     // Dành cho root
     private void loadData()
     {
-        var getData = from u in db.admin_Users
-                      join gr in db.admin_GroupUsers on u.groupuser_id equals gr.groupuser_id
-                      where u.username_id >= 2 && u.username_active == true
-                      select new
-                      {
-                          u.username_id,
-                          u.username_fullname,
-                          u.username_phone,
-                          u.username_email,
-                          u.username_username,
-                          gr.groupuser_name,
-                          gr.groupuser_id
-                      };
+        var getData = from u in db.tb_Users
+                      select u;
         grvList.DataSource = getData;
         grvList.DataBind();
     }
@@ -98,21 +87,35 @@ public partial class admin_page_module_access_admin_UserManage : System.Web.UI.P
     protected void btnXoa_Click(object sender, EventArgs e)
     {
 
-        cls_GiaoVien cls;
-        List<object> selectedKey = grvList.GetSelectedFieldValues(new string[] { "username_id" });
+        List<object> selectedKey = grvList.GetSelectedFieldValues(new string[] { "us_id" });
         if (selectedKey.Count > 0)
         {
             foreach (var item in selectedKey)
             {
-                cls = new cls_GiaoVien();
-                if (cls.Linq_Xoa(Convert.ToInt32(item)))
-                    alert.alert_Success(Page, "Xóa thành công", "");
-                else
-                    alert.alert_Error(Page, "Xóa thất bại", "");
+                tb_User del = db.tb_Users.Where(x => x.us_id == Convert.ToInt32(item)).FirstOrDefault();
+				if (del.us_acti == false)
+				{
+                    del.us_acti = true;
+
+				}
+				else
+				{
+                    del.us_acti = false;
+
+                }
+            }
+            try
+            {
+                db.SubmitChanges();
+                ScriptManager.RegisterClientScriptBlock(Page, this.GetType(), "Alert", "swal('Cập nhật thành công','','success').then(function(){grvList.Refresh();})", true);
+            }
+            catch
+            {
+                alert.alert_Error(Page, "Cập nhật thất bại", "");
             }
         }
         else
-            alert.alert_Warning(Page, "Bạn chưa chọn dữ liệu", "");
+            alert.alert_Warning(Page, "Bạn chưa chọn dữ liệu", "Guide: Tích vào ô đầu dòng.");
     }
 
     public bool checknull()

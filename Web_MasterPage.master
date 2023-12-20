@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../css/font.css" />
     <link rel="stylesheet" type="text/css" href="../css/style.css" />
     <link href="css/grid.css" rel="stylesheet" />
-
+    <script src="/admin_js/sweetalert.min.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/swiper.min.js"></script>
     <link href="css/font-awesome.css" rel="stylesheet" />
@@ -23,9 +23,9 @@
     <link href="css/jquery.mmenu.all.min.css" rel="stylesheet" />
     <script src="js/jquery.mmenu.min.all.min.js"></script>
     <script src="js/jquery.form.min.js"></script>
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <%--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">--%>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -131,13 +131,14 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <asp:ScriptManager ID="smScriptManager" runat="server"></asp:ScriptManager>
         <div id="page">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-                <div class="container-fluid" style="background: beige;">
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background: beige;">
+                <div class="container-fluid">
                     <a class="navbar-brand" href="trang-chu">
                         <img style="margin-left: 42%; max-width: 89%;" src="images/logo/logo.png" />
                     </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -150,51 +151,40 @@
                                 <a class="nav-link active" href="gioi-thieu">Giới Thiệu</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="menu" data-toggle="dropdown">Thực đơn</a>
-                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="bun-hue">Bún Bò </a></li>
-                                    <li><a class="dropdown-item" href="#">Cơm Huế</a></li>
-                                    <li><a class="dropdown-item" href="#">Cháo Huế</a></li>
-                                    <li><a class="dropdown-item" href="#">Món tráng miệng</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link active" href="blog">Blog Ẩm Thực</a>
-                            </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="he-thong" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">Hệ thống cửa hàng
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" style="color: black" role="button" data-bs-toggle="dropdown" aria-expanded="false">Thực đơn
                                 </a>
-                                <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                                    <li><a class="dropdown-item" href="hang-bong">Nét Huế Hàng Bông</a></li>
-                                    <li><a class="dropdown-item" href="#">Nét Huế Lạc Trung</a></li>
-                                    <li><a class="dropdown-item" href="#">Nét Huế Times city</a></li>
+                                <ul class="dropdown-menu" style="background: beige;" aria-labelledby="navbarDarkDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="menu">Tất cả</a></li>
+                                    <asp:Repeater runat="server" ID="rpMenu">
+                                        <ItemTemplate>
+                                            <li><a class="dropdown-item" href="<%#Eval("link") %>"><%#Eval("cate_name") %></a></li>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active" href="lien-he">Đặt bàn</a>
+                                <a class="nav-link active" href="blog">Blog</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="dat-ban">Đặt bàn</a>
                             </li>
                         </ul>
-                        <div class="user-icon">
-                            <a href="login"><i class="bi bi-people-fill"></i></a>
-                        </div>
-                        <div class="cart-icon">
-                            <a href="gio-hang">
-                                <i class="fa fa-shopping-cart"></i>
-                            </a>
-                        </div>
-                        <div class="d-flex showsearch">
-                            <!-- Search Icon -->
-                            <div class="search-icon">
-                                <i class="fa fa-search"></i>
-                                <form>
-                                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                                </form>
+                        <div style="display: flex; justify-items: center">
+                            <div class="user-icon" style="margin-right: 20px">
+                                <a href="login"><i class="bi bi-people-fill"></i></a>
+                            </div>
+                            <div class="cart-icon">
+                                <a href="gio-hang">
+                                    <i class="fa fa-shopping-cart"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </nav>
-
+            <br />
+            <br />
+            <br />
 
             <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
             </asp:ContentPlaceHolder>
@@ -209,6 +199,47 @@
             <asp:ContentPlaceHolder ID="ContentPlaceHolder7" runat="server">
             </asp:ContentPlaceHolder>
 
+
+            <div class="box-ht-cuahang ">
+                <div class="grid">
+                    <div class="flex-container flex-center" style="">
+
+                        <div class="cell-list-map mobile-cell-1-1 tab-cell-1-1" style="background: #FFF">
+                            <div class="title-list-map">
+                                <div class="flex-container">
+                                    <div class="title-map-text">Hệ thống nhà hàng</div>
+
+                                </div>
+                            </div>
+                            <div class="box-list-map">
+                                <asp:Repeater runat="server" ID="rpHeThong">
+                                    <ItemTemplate>
+                                        <div class="item-map" data-id="16">
+                                            <div class="name"><%#Eval("re_name") %></div>
+                                            <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                                                <tbody>
+                                                    <tr>
+                                                        <td width="15px"><i class="fa fa-map-marker" aria-hidden="true"></i></td>
+                                                        <td><%#Eval("re_address") %></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><i class="fa fa-phone" aria-hidden="true"></i></td>
+                                                        <td>Hotline: <%#Eval("phone") %></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><i class="fa fa-envelope" aria-hidden="true"></i></td>
+                                                        <td><%#Eval("email") %></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </ItemTemplate>
+                                </asp:Repeater>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="footer" style="width: 100%; overflow: hidden">
                 <div class="c30"></div>
@@ -305,13 +336,12 @@
                 </div>
                 <div class="c30"></div>
             </div>
-            </script>
+
 
             <asp:ContentPlaceHolder ID="ContentPlaceHolder8" runat="server">
             </asp:ContentPlaceHolder>
             <div class="overlay"></div>
         </div>
-
     </form>
 </body>
 </html>
