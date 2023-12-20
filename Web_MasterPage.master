@@ -132,34 +132,25 @@
 <body>
     <form id="form1" runat="server">
         <div id="page">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid " style="background: beige;">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                <div class="container-fluid" style="background: beige;">
                     <a class="navbar-brand" href="trang-chu">
-                        <img style="margin-left: 42%; max-width: 89%;"
-                            src="images/logo/logo.png" /></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <img style="margin-left: 42%; max-width: 89%;" src="images/logo/logo.png" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                            <!-- Các mục menu ở đây -->
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="trang-chu" href="trang-chu">Trang Chủ</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link active" href="gioi-thieu">Giới Thiệu</a>
                             </li>
-                            <%--<li class="nav-item dropdown">
-                                <a class="nav-link active" href="menu">Thực Đơn</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Bún Bò Huế</a></li>
-                                    <li><a class="dropdown-item" href="#">Cơm Huế</a></li>
-                                    <li><a class="dropdown-item" href="#">Cháo Huế</a></li>
-                                    <li><a class="dropdown-item" href="#">Bánh Huế</a></li>
-                                </ul>
-                            </li>--%>
-                           
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="menu" data-bs-toggle="dropdown">Thực đơn</a>
+                                <a class="nav-link dropdown-toggle" href="menu" data-toggle="dropdown">Thực đơn</a>
                                 <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                                     <li><a class="dropdown-item" href="bun-hue">Bún Bò </a></li>
                                     <li><a class="dropdown-item" href="#">Cơm Huế</a></li>
@@ -182,7 +173,6 @@
                             <li class="nav-item">
                                 <a class="nav-link active" href="lien-he">Đặt bàn</a>
                             </li>
-
                         </ul>
                         <div class="user-icon">
                             <a href="login"><i class="bi bi-people-fill"></i></a>
@@ -196,17 +186,15 @@
                             <!-- Search Icon -->
                             <div class="search-icon">
                                 <i class="fa fa-search"></i>
-
                                 <form>
                                     <input class="form-control" type="search" placeholder="Search" aria-label="Search">
                                 </form>
                             </div>
                         </div>
-
                     </div>
                 </div>
-
             </nav>
+
 
             <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
             </asp:ContentPlaceHolder>
