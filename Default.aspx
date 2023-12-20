@@ -10,8 +10,6 @@
             height: auto;
             margin: auto;
         }
-
-       
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
@@ -109,11 +107,11 @@
                     </div>
                     <div class="cell-1-4 b-pro tab-cell-1-2 mobile-cell-1-2 margin-bottom-20">
                         <div>
-                            <a href="bun-hue/bun-bo-hue-dac-biet.html">
+                            <a href="bun-bo-dac-biet">
                                 <img src="images/Trang_chu/bun-bo-hue.jpg"
                                     width="100%" alt="Bún bò Huế đặc biệt"></a>
                         </div>
-                        <div class="product-name-home"><a href="bun-hue/bun-bo-hue-dac-biet.html">Bún bò Huế đặc biệt</a></div>
+                        <div class="product-name-home"><a href="bun-bo-dac-biet">Bún bò Huế đặc biệt</a></div>
                         <div class="product-price-home">84.000₫</div>
                         <div class="c10"></div>
                         <div align="center"><a class="btn-order-c" href="addcart/bun-bo-hue-dac-biet.html"><i class="fa fa-shopping-cart"></i>Đặt món</a></div>
@@ -179,56 +177,129 @@
                 </div>
                 <div class="c20"></div>
                 <div class="flex-container">
-                    <div class="cell-1-3 mobile-cell-1-1 tab-cell-1-2 pad-cell-1-3 news-cell-home margin-bottom-20">
+                    <div class="cell-1-3 margin-bottom-20 tab-cell-1-2 mobile-cell-1-1">
                         <div>
-                            <a href="tin-tuc-noi-bat/mua-3-mon-mang-ve-tang-1-che-hue.html">
-                                <img src="images/tet-2023/mua3tang1.jpg" width="100%" alt="Mua 3 Món Mang Về Tặng 1 Chè Huế"></a>
+                            <a href="tin-tuc">
+                                <img src="../images/banner/phuhopkhauvi.jpg" alt="Phong Phú Khẩu Vị Riêng Của Người Huế " class="image-news" width="100%"></a>
                         </div>
-                        <div class="c5"></div>
-                        <h3 class="news-name-home"><a href="tin-tuc-noi-bat/mua-3-mon-mang-ve-tang-1-che-hue.html">Mua 3 Món Mang Về Tặng 1 Chè Huế</a></h3>
-                        <div class="createdate-home">Ngày 21/03/2023</div>
-                        <div class="c5"></div>
-                        <div>
-                            Nét Huế vẫn đang áp dụng chương trình ưu đãi dành cho khách mua mang về ạ.
- Mua 3 món ăn, Tặng 1 Chè Huế
-Mua Lẩu mang về cũng được thêm chè, "Xtra Ưu Đãi" 
-- Lẩu nhỏ: thêm 1 chè.
-- Lẩu lớn : thêm 2 chè.
-                        </div>
-                    </div>
-v>
-                    <div class="cell-1-3 mobile-cell-1-1 tab-cell-1-2 pad-cell-1-3 news-cell-home margin-bottom-20">
-                        <div>
-                            <a href="tin-tuc-noi-bat/thong-bao-nghi-tet-va-ban-thong-tet-2023.html">
-                                <img src="images/nghitet2023.jpg" width="100%" alt="Thông Báo Nghỉ Tết và Bán Thông Tết 2023"></a>
-                        </div>
-                        <div class="c5"></div>
-                        <h3 class="news-name-home"><a href="tin-tuc-noi-bat/thong-bao-nghi-tet-va-ban-thong-tet-2023.html">Thông Báo Nghỉ Tết và Bán Thông Tết 2023</a></h3>
-                        <div class="createdate-home">Ngày 20/01/2023</div>
-                        <div class="c5"></div>
-                        <div>
-                            &nbsp; &nbsp; Nét Huế Xin Thông Báo Nghỉ Tết và Bán Thông Tết 2023
-
-Hệ Thống nhà hàng Nét Huế xin trân trọng thông báo tới quý khách lịch nghỉ Tết
-và bán hàng thông Tết tại các nhà hàng trong hệ thống
-
-&nbsp;
-                        </div>
-                    </div>
-                    <div class="cell-1-3 mobile-cell-1-1 tab-cell-1-2 pad-cell-1-3 news-cell-home margin-bottom-20">
-                        <div>
-                            <a href="blog-am-thuc/phong-phu-khau-vi-rieng-cua-nguoi-hue.html">
-                                <img src="images/banner/phuhopkhauvi.jpg" width="100%" alt="Phong Phú Khẩu Vị Riêng Của Người Huế "></a>
-                        </div>
-                        <div class="c5"></div>
-                        <h3 class="news-name-home"><a href="blog-am-thuc/phong-phu-khau-vi-rieng-cua-nguoi-hue.html">Phong Phú Khẩu Vị Riêng Của Người Huế </a></h3>
-                        <div class="createdate-home">Ngày 17/05/2022</div>
-                        <div class="c5"></div>
+                        <h3 class="news-name"><a href="tin-tuc">Phong Phú Khẩu Vị Riêng Của Người Huế </a></h3>
                         <div>Nét Văn Hóa Ẩm Thực Của Người Huế</div>
+                    </div>
+                    <div class="cell-1-3 margin-bottom-20 tab-cell-1-2 mobile-cell-1-1">
+                        <div>
+                            <a href="/blog-am-thuc/net-hue-khai-xuan-phuc-vu-tai-cho-ca-he-thong.html">
+                                <img src="../images/Tet-2023/khai-xuan.jpg" alt="Nét Huế Khai Xuân Phục Vụ Tại Chỗ Cả Hệ Thống" class="image-news" width="100%"></a>
+                        </div>
+                        <h3 class="news-name"><a href="/blog-am-thuc/net-hue-khai-xuan-phuc-vu-tai-cho-ca-he-thong.html">Nét Huế Khai Xuân Phục Vụ Tại Chỗ Cả Hệ Thống</a></h3>
+                        <div>&nbsp;</div>
+                    </div>
+                    <div class="cell-1-3 margin-bottom-20 tab-cell-1-2 mobile-cell-1-1">
+                        <div>
+                            <a href="/blog-am-thuc/net-hue-ban-thong-tet-2022.html">
+                                <img src="../images/Tet-2023/phuc-vu-thong-tet.jpg" alt="Nét Huế Bán Thông Tết 2022" class="image-news" width="100%"></a>
+                        </div>
+                        <h3 class="news-name"><a href="/blog-am-thuc/net-hue-ban-thong-tet-2022.html">Nét Huế Bán Thông Tết 2022</a></h3>
+                        <div>&nbsp;</div>
                     </div>
                 </div>
             </div>
             <div class="c30"></div>
+        </div>
+        <div class="box-ht-cuahang ">
+            <div class="grid">
+                <div class="flex-container flex-center" style="">
+
+                    <div class="cell-list-map mobile-cell-1-1 tab-cell-1-1" style="background: #FFF">
+                        <div class="title-list-map">
+                            <div class="flex-container">
+                                <div class="title-map-text">Hệ thống nhà hàng</div>
+
+                            </div>
+                        </div>
+                        <div class="box-list-map">
+                            <div class="item-map active" data-id="16">
+                                <div class="name">Nét Huế Hàng Bông</div>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                                    <tbody>
+                                        <tr>
+                                            <td width="15px"><i class="fa fa-map-marker" aria-hidden="true"></i></td>
+                                            <td>Nét Huế 198 Hàng Bông, Q. Hoàn Kiếm, Hà Nội</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fa fa-phone" aria-hidden="true"></i></td>
+                                            <td>Hotline: 024.3938.1795</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fa fa-envelope" aria-hidden="true"></i></td>
+                                            <td>info@nethue.com.vn</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+                            <div class="item-map" data-id="25">
+                                <div class="name">Nét Huế Lạc Trung</div>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                                    <tbody>
+                                        <tr>
+                                            <td width="15px"><i class="fa fa-map-marker" aria-hidden="true"></i></td>
+                                            <td>Nét Huế 57 Lạc Trung - Q. Hai Bà Trưng - Hà Nội</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fa fa-phone" aria-hidden="true"></i></td>
+                                            <td>Hotline: 024.3877.5757</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fa fa-envelope" aria-hidden="true"></i></td>
+                                            <td>info@nethue.com.vn</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="item-map" data-id="26">
+                                <div class="name">Nét Huế Times city</div>
+                                <table width="100%" border="0" cellspacing="0" cellpadding="5">
+                                    <tbody>
+                                        <tr>
+                                            <td width="15px"><i class="fa fa-map-marker" aria-hidden="true"></i></td>
+                                            <td>Nét Huế 10 Nguyễn Tri Phương - Q.Thanh Khê - Đà Nẵng</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fa fa-phone" aria-hidden="true"></i></td>
+                                            <td>Hotline: 024.3877.5757</td>
+                                        </tr>
+                                        <tr>
+                                            <td><i class="fa fa-envelope" aria-hidden="true"></i></td>
+                                            <td>info@nethue.com.vn</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    $(function () {
+                        $('.box-list-map .item-map:first').addClass('active');
+                        /*$( "#loadmap" ).html('<div class="loading">Đang tải...</div>');
+                        $( "#loadmap" ).load( "/index4.php?page=dailymap&id=" + $('.box-list-map .item-map:first').data('id'), function( response, status, xhr ) {
+                          if ( status == "error" ) {}
+                        });*/
+
+                        $('.item-map').click(function () {
+                            $('.box-list-map .item-map').removeClass('active');
+                            $(this).addClass('active');
+                            /*$( "#loadmap" ).html('<div class="loading">Đang tải...</div>');
+                            $( "#loadmap" ).load( "/index4.php?page=dailymap&id=" + $(this).data('id'), function( response, status, xhr ) {
+                              if ( status == "error" ) { }
+                            });*/
+                            return false;
+                        })
+                    })
+                </script>
+            </div>
         </div>
     </div>
 

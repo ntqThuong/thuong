@@ -75,9 +75,7 @@
                         <div class="c10"></div>
                     </div>
                 </div>
-                <div class="paging">
-                    <div class="paging1"><a href="/thuc-don/page-1/" class="page disabled"><strong><i class="fa fa-angle-double-left"></i></strong></a><a href="/thuc-don/page-1/" class="page disabled"><strong><i class="fa fa-angle-left"></i></strong></a><a class="clicked page">&nbsp;1&nbsp;</a><a href="/thuc-don/page-2/" class="page">&nbsp;2&nbsp;</a><a href="/thuc-don/page-3/" class="page">&nbsp;3&nbsp;</a><a href="/thuc-don/page-4/" class="page">&nbsp;4&nbsp;</a><a href="/thuc-don/page-5/" class="page">&nbsp;5&nbsp;</a> <a href="/thuc-don/page-5/" class="page "><strong><i class="fa fa-angle-right"></i></strong></a><a href="/thuc-don/page-5/" class="page "><strong><i class="fa fa-angle-double-right"></i></strong></a></div>
-                </div>
+                
             </div>
         </div>
     </div>
