@@ -21,7 +21,7 @@ using System.Reflection;
 
 
 
-[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="db_ql")]
+[global::System.Data.Linq.Mapping.DatabaseAttribute(Name="websitedb")]
 public partial class dbcsdlDataContext : System.Data.Linq.DataContext
 {
 	
@@ -80,7 +80,7 @@ public partial class dbcsdlDataContext : System.Data.Linq.DataContext
   #endregion
 	
 	public dbcsdlDataContext() : 
-			base(global::System.Configuration.ConfigurationManager.ConnectionStrings["db_qlConnectionString1"].ConnectionString, mappingSource)
+			base(global::System.Configuration.ConfigurationManager.ConnectionStrings["websitedbConnectionString"].ConnectionString, mappingSource)
 	{
 		OnCreated();
 	}
