@@ -28,26 +28,26 @@
             <div class="flex-container">
                 <div class="cell-1-3 margin-bottom-20 tab-cell-1-2 mobile-cell-1-1">
                     <div>
-                        <a href="tin-tuc">
+                        <a href="phong-phu-khau-vi">
                             <img src="../images/banner/phuhopkhauvi.jpg" alt="Phong Phú Khẩu Vị Riêng Của Người Huế " class="image-news" width="100%"></a>
                     </div>
-                    <h3 class="news-name"><a href="tin-tuc">Phong Phú Khẩu Vị Riêng Của Người Huế </a></h3>
+                    <h3 class="news-name"><a href="phong-phu-khau-vi">Phong Phú Khẩu Vị Riêng Của Người Huế </a></h3>
                     <div>Nét Văn Hóa Ẩm Thực Của Người Huế</div>
                 </div>
                 <div class="cell-1-3 margin-bottom-20 tab-cell-1-2 mobile-cell-1-1">
                     <div>
-                        <a href="/blog-am-thuc/net-hue-khai-xuan-phuc-vu-tai-cho-ca-he-thong.html">
+                        <a href="/khai-xuan">
                             <img src="../images/Tet-2023/khai-xuan.jpg" alt="Nét Huế Khai Xuân Phục Vụ Tại Chỗ Cả Hệ Thống" class="image-news" width="100%"></a>
                     </div>
-                    <h3 class="news-name"><a href="/blog-am-thuc/net-hue-khai-xuan-phuc-vu-tai-cho-ca-he-thong.html">Nét Huế Khai Xuân Phục Vụ Tại Chỗ Cả Hệ Thống</a></h3>
+                    <h3 class="news-name"><a href="khai-xuan">Nét Huế Khai Xuân Phục Vụ Tại Chỗ Cả Hệ Thống</a></h3>
                     <div>&nbsp;</div>
                 </div>
                 <div class="cell-1-3 margin-bottom-20 tab-cell-1-2 mobile-cell-1-1">
                     <div>
-                        <a href="/blog-am-thuc/net-hue-ban-thong-tet-2022.html">
+                        <a href="thong-bao">
                             <img src="../images/Tet-2023/phuc-vu-thong-tet.jpg" alt="Nét Huế Bán Thông Tết 2022" class="image-news" width="100%"></a>
                     </div>
-                    <h3 class="news-name"><a href="/blog-am-thuc/net-hue-ban-thong-tet-2022.html">Nét Huế Bán Thông Tết 2022</a></h3>
+                    <h3 class="news-name"><a href="thong-bao">Nét Huế Bán Thông Tết 2022</a></h3>
                     <div>&nbsp;</div>
                 </div>
             </div>

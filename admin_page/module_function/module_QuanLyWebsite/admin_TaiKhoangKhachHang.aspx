@@ -33,8 +33,8 @@
             return true;
         }
         function confirmDel() {
-            swal("Bạn có thực sự muốn xóa?",
-                "Nếu xóa, dữ liệu sẽ không thể khôi phục.",
+            swal("Bạn có muốn mở/khoá tài khoản không",
+                "Nếu mở / khoá, dữ liệu sẽ không thể khôi phục.",
                 "warning",
                 {
                     buttons: true,

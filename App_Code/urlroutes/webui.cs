@@ -28,10 +28,13 @@ public class webui
         list.Add("webUuDai|uu-dai|~/web_module/module_UuDai.aspx");
         //menu
         list.Add("webmenu|Menu|~/web_module/module_Menu.aspx");
-        list.Add("webthucdon|bun-hue|~/web_module/module_BunHue.aspx");
+        list.Add("webthucdon|nhom-{url-nhom-san-pham}|~/web_module/module_BunHue.aspx");
+        list.Add("webthucdonmon|mon-{url-san-pham}|~/web_module/module_BunBoDacBiet.aspx");
         //blog
         list.Add("webBlog|blog|~/web_module/module_Blog.aspx");
-
+        list.Add("webBlog1|phong-phu-khau-vi|~/web_module/module_Bai1.aspx");
+        list.Add("webBlog2|khai-xuan|~/web_module/module_Bai2.aspx");
+        list.Add("webBlog3|thong-bao|~/web_module/module_Bai3.aspx");
         //liên hệ 
         list.Add("webLienHe|lien-he|~/web_module/module_LienHe.aspx");
         //đặt bàn 

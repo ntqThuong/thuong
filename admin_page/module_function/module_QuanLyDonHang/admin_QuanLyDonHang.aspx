@@ -29,32 +29,12 @@
             document.getElementById('<%=btnChiTiet.ClientID%>').click();
         }
         function checkNULL() {
-            var name = document.getElementById('<%= txtName.ClientID%>');
-            var link = document.getElementById('<%= txtLink.ClientID%>');
-            var key = document.getElementById('<%= txtKeywords.ClientID%>');
-            var des = document.getElementById('<%= txtDescription.ClientID%>');
-
-            if (name.value.trim() == "") {
-                swal('Tên không được để trống!', '', 'warning').then(function () { name.focus(); });
-                return false;
-            }
-            if (key.value.trim() == "") {
-                swal('Từ khoá không được để trống!', '', 'warning').then(function () { position.focus(); });
-                return false;
-            }
-            if (des.value.trim() == "") {
-                swal('Mô tả không được để trống!', '', 'warning').then(function () { position.focus(); });
-                return false;
-            }
-            if (link.value.trim() == "") {
-                swal('Url thân thiện form không được để trống!', '', 'warning').then(function () { link.focus(); });
-                return false;
-            }
+            
             return true;
         }
         function confirmDel() {
-            swal("Bạn có thực sự muốn xóa?",
-                "Nếu xóa, dữ liệu sẽ không thể khôi phục.",
+            swal("Món đã làm xong?",
+                "Nếu duyệt, dữ liệu sẽ không thể khôi phục.",
                 "warning",
                 {
                     buttons: true,
@@ -115,42 +95,34 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button id="btnClosePopup" type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Thêm thực đơn</h4>
+                        <h4 class="modal-title">Chi tiết đơn hàng</h4>
                     </div>
                     <div class="modal-body">
                         <asp:UpdatePanel ID="udPopup" runat="server" UpdateMode="Always">
                             <ContentTemplate>
-                                <div class="form-group row">
-                                    <label class="col-sm-2 form-control-label text-xs-right">Tên thực đơn:</label>
-                                    <div class="col-sm-10">
-                                        <asp:TextBox ID="txtName" runat="server" ClientIDMode="Static" CssClass="form-control boxed"> </asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-2 form-control-label text-xs-right">Từ khoá:</label>
-                                    <div class="col-sm-10">
-                                        <asp:TextBox ID="txtKeywords" runat="server" ClientIDMode="Static" CssClass="form-control boxed"> </asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-2 form-control-label text-xs-right">Mô tả ngắn:</label>
-                                    <div class="col-sm-10">
-                                        <asp:TextBox ID="txtDescription" runat="server" ClientIDMode="Static" CssClass="form-control boxed"> </asp:TextBox>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-sm-2 form-control-label text-xs-right">Url thân thiện:</label>
-                                    <div class="col-sm-10">
-                                        <asp:TextBox ID="txtLink" runat="server" ClientIDMode="Static" CssClass="form-control boxed"> </asp:TextBox>
-                                    </div>
-                                </div>
+                                <table class="table">
+                                    <tr>
+                                        <th>Tên món</th>
+                                        <th>Số lượng</th>
+                                        <th>Đơn giá</th>
+                                    </tr>
+                                    <asp:Repeater runat="server" ID="rpChiTiet">
+                                        <ItemTemplate>
+                                            <tr>
+                                                <td><%#Eval("pr_name") %></td>
+                                                <td><%#Eval("pr_number") %></td>
+                                                <td><%#Eval("pr_pricecurrent") %></td>
+                                            </tr>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                </table>
                             </ContentTemplate>
                         </asp:UpdatePanel>
                     </div>
                     <div class="modal-footer">
                         <asp:UpdatePanel ID="udLuu" runat="server">
                             <ContentTemplate>
-                                <asp:Button ID="btnLuu" runat="server" ClientIDMode="Static" Text="Lưu" CssClass="btn btn-primary" OnClientClick="return checkNULL()" OnClick="btnLuu_Click" />
+                                <asp:Button ID="btnLuu" runat="server" ClientIDMode="Static" Text="Lưu" CssClass="btn btn-primary none" OnClientClick="return checkNULL()" OnClick="btnLuu_Click" />
                             </ContentTemplate>
                         </asp:UpdatePanel>
                     </div>

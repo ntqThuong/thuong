@@ -16,17 +16,32 @@
         <div class="c20"></div>
         <div class="c20"></div>
         <div>
-            <h1 class="title-home title-page"><a>Bún Huế</a></h1>
+            <h1 class="title-home title-page"><a><%=title %></a></h1>
             <div class="c10"></div>
             <div>
                 <div style="text-align: center">
-                    <span style="font-size: 14px">Nhắc đến xứ Huế, chắc hẳn ai cũng phải thổn thức trước hương thơm đặc biệt trong nước mắm ruốc của món bún bò Huế, hương vị thanh thanh trong món bún Hến từ vùng biển Cồn Hến cùng nhiều món bún đặc sản khác bắt nguồn từ xứ Huế. Tất cả gói gọn trong tình yêu thương sâu đậm của người đầu bếp tại Nét Huế với ẩm thực cố đô.&nbsp;</span><br>
+                    <span style="font-size: 14px"><%=des %>&nbsp;</span><br>
                     &nbsp;
                 </div>
             </div>
             <div class="c20"></div>
             <div class="flex-container ">
-                <div class="cell-1-4 mobile-cell-1-2 tab-cell-1-3 b-pro margin-bottom-40">
+                <asp:Repeater runat="server" ID="rpMon">
+                    <ItemTemplate>
+                        <div class="cell-1-4 mobile-cell-1-2 tab-cell-1-3 b-pro margin-bottom-40">
+                            <div>
+                                <a href="mon-<%#Eval("link") %>">
+                                    <img src="<%#Eval("pr_image") %>" alt="<%#Eval("pr_name") %>" width="100%"></a>
+                            </div>
+                            <div class="product-name-home"><a href="#"><%#Eval("pr_name") %></a></div>
+                            <div class="product-price-home"><%#Eval("pr_price") %> đ</div>
+                            <div class="c10"></div>
+                            <%--<div align="center"><a class="btn-order-c" href="#"><i class="fa fa-shopping-cart"></i>Đặt món</a></div>--%>
+                            <div class="c10"></div>
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
+                <%--<div class="cell-1-4 mobile-cell-1-2 tab-cell-1-3 b-pro margin-bottom-40">
                     <div>
                         <a href="#">
                             <img src="../images/bun/bun-bp-hue-so1.png" alt="Bún bò Huế số 1" width="100%"></a>
@@ -69,8 +84,7 @@
                     <div class="c10"></div>
                     <div align="center"><a class="btn-order-c" href="#"><i class="fa fa-shopping-cart"></i>Đặt món</a></div>
                     <div class="c10"></div>
-                </div>
-
+                </div>--%>
             </div>
         </div>
     </div>

@@ -74,18 +74,15 @@
         <p class="text-center">Bạn chưa có tài khoản? <a href="/dang-ky">Đăng ký tại đây</a></p>
         <div class="form-input">
             <label>Tên đăng nhập <span style="color: orangered">*</span></label>
-            <input type="email" name="email" value="" placeholder="Email">
-
-            <%--            <input type="text" name="name" runat="server" id="txtUser" class="form-control" value="" placeholder="Nhập tên đăng nhập" />--%>
+            <input type="email" id="txtTen" runat="server" name="email" value="" placeholder="Tên đăng nhập">
         </div>
         <br />
         <div class="form-input">
             <label>Mật khẩu <span style="color: orangered">*</span></label>
-            <input type="password" name="password" value="" placeholder="Password">
-            <%--            <input type="password" name="name" runat="server" id="txtPass" class="form-control" value="" placeholder="Nhập mật khẩu" />--%>
+            <input type="password" id="txtPass" runat="server" name="password" value="" placeholder="Password">
         </div>
         <br />
-        <a href="#" class="input-dangnhap" id="btnLogin">Đăng nhập</a>
+        <a href="#" class="btn btn-primary" runat="server" id="btnLogin" onserverclick="btnLogin_ServerClick">Đăng nhập</a>
         <br />
         <br />
         <br />

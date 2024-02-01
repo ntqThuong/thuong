@@ -30,7 +30,22 @@
                 </div>
                 <div class="c20"></div>
                 <div class="flex-container ">
-                    <div class="cell-1-4 mobile-cell-1-2 tab-cell-1-3 b-pro margin-bottom-40">
+                  <asp:Repeater runat="server" ID="rpMon">
+                    <ItemTemplate>
+                        <div class="cell-1-4 mobile-cell-1-2 tab-cell-1-3 b-pro margin-bottom-40">
+                            <div>
+                                <a href="mon-<%#Eval("link") %>">
+                                    <img src="<%#Eval("pr_image") %>" alt="<%#Eval("pr_name") %>" width="100%"></a>
+                            </div>
+                            <div class="product-name-home"><a href="#"><%#Eval("pr_name") %></a></div>
+                            <div class="product-price-home"><%#Eval("pr_price") %> đ</div>
+                            <div class="c10"></div>
+                            <%--<div align="center"><a class="btn-order-c" href="#"><i class="fa fa-shopping-cart"></i>Đặt món</a></div>--%>
+                            <div class="c10"></div>
+                        </div>
+                    </ItemTemplate>
+                </asp:Repeater>
+                    <%--<div class="cell-1-4 mobile-cell-1-2 tab-cell-1-3 b-pro margin-bottom-40">
                         <div>
                             <a href="#">
                                 <img src="../images/Thuc_don/khoai-tia-6-vien.jpg" alt="Khoai Tía Phomai - set lớn ( 6 viên )" width="100%"></a>
@@ -73,7 +88,7 @@
                         <div class="c10"></div>
                         <div align="center"><a class="btn-order-c" href="#"><i class="fa fa-shopping-cart"></i>Đặt món</a></div>
                         <div class="c10"></div>
-                    </div>
+                    </div>--%>
                 </div>
                 
             </div>

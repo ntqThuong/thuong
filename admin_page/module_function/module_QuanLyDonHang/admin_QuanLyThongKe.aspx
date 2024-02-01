@@ -18,17 +18,18 @@
         <canvas id="chatTheoThang"></canvas>
     </div>
     <script>
+        var listDataYear = "<%=dataYear%>".split(',');
         document.addEventListener("DOMContentLoaded", function () {
             var ctx = document.getElementById("chatTheoNam").getContext("2d");
             var data = {
                 labels: ["Tháng 1", "Tháng 2", "Tháng 3", "Tháng 4", "Tháng 5", "Tháng 6", "Tháng 7", "Tháng 8", "Tháng 9", "Tháng 10", "Tháng 11", "Tháng 12"],
                 datasets: [
                     {
-                        label: "Doanh thu năm 2023",
+                        label: "Doanh thu tháng "+<%=_year%>,
                         backgroundColor: "rgba(75,192,192,0.4)",
                         borderColor: "rgba(75,192,192,1)",
                         borderWidth: 1,
-                        data: [1200, 1500, 900, 2000, 1600, 1800, 1100, 1900, 2200, 1700, 1300, 2500],
+                        data: listDataYear,
                     },
                 ],
             };
@@ -49,17 +50,19 @@
         });
     </script>
     <script>
+        const str = "<%=dataMonth%>";
+        var listDataMonth = str.split(',');
         document.addEventListener("DOMContentLoaded", function () {
             var ctx = document.getElementById("chatTheoThang").getContext("2d");
             var data = {
                 labels: ["Ngày 1", "Ngày 2", "Ngày 3", "Ngày 4", "Ngày 5", "Ngày 6", "Ngày 7", "Ngày 8", "Ngày 9", "Ngày 10", "Ngày 11", "Ngày 12", "Ngày 13", "Ngày 14", "Ngày 15", "Ngày 16", "Ngày 17", "Ngày 18", "Ngày 19", "Ngày 20", "Ngày 21", "Ngày 22", "Ngày 23", "Ngày 24", "Ngày 25", "Ngày 26", "Ngày 27", "Ngày 28", "Ngày 29", "Ngày 30", "Ngày 31"],
                 datasets: [
                     {
-                        label: "Doanh thu tháng 12",
+                        label: "Doanh thu ngày "+<%=_month%>,
                         borderColor: "rgba(75,192,192,1)",
                         borderWidth: 2,
                         fill: false,
-                        data: [120, 150, 90, 200, 160, 180, 110, 190, 220, 170, 130, 250, 140, 180, 120, 200, 170, 160, 210, 180, 200, 150, 160, 180, 210, 140, 160, 190, 200, 170, 210],
+                        data: listDataMonth,
                     },
                 ],
             };

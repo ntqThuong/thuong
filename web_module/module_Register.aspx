@@ -5,68 +5,16 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <style>
-        .form-login {
-            display: grid;
-            justify-items: center;
-        }
-
-            .form-login h3 {
-                font-size: 30px;
-            }
-
-            .form-login h3, h5 {
-                font-weight: 400;
-            }
-
-            .form-login p {
-                font-size: larger;
-            }
-
         .form-input {
-            width: 30%;
+            display: flex;
+            justify-content: space-between;
         }
 
-        .input-dangnhap {
-            width: 30%;
-            text-align: center;
-            background: #cd6420;
-            padding: 7px;
-            font-size: 20px;
-            color: white;
-            border-radius: 5px;
-        }
-
-
-        /* Input đẹp hơn */
-        input[type="email"],
-        input[type="phone"],
-        input[type="user_name"],
-        input[type="password"] {
-            width: 100%;
-            padding: 5px;
-            font-size: 16px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-            /* Nếu muốn thêm hiệu ứng khi focus vào input */
-            input[type="email"]:focus,
-            input[type="phone"]:focus
-            input[type="user_name"]:focus
-            input[type="password"]:focus {
-                border-color: #007bff; /* Màu sắc tùy chỉnh */
-                box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Màu sắc tùy chỉnh */
+        @media only screen and (max-width: 600px) {
+            .form-login{
+                margin:0px 30px;
             }
-
-
-
-        input::placeholder {
-            color: rgba(0, 0, 0, 0.5); /* Màu chữ và mức độ mờ (từ 0 đến 1) */
         }
-
-        
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" runat="Server">
@@ -79,43 +27,56 @@
     <br />
     <br />
     <br />
-    <div class="form-login">
-        <h3 class="text-center">ĐĂNG KÝ TÀI KHOẢN</h3>
-        <p class="text-center">Bạn đã có tài khoản? <a href="/login">Đăng nhập tại đây</a></p>
+    <center class="form-login">
+        <h3>ĐĂNG KÝ TÀI KHOẢN</h3>
+        <p>Bạn đã có tài khoản? <a href="/login">Đăng nhập tại đây</a></p>
         <br />
         <br />
-        <h5 class="text-center">THÔNG TIN CÁ NHÂN</h5>
-        <div class="form-input">
-            <label>Họ và tên <span style="color: orangered">*</span></label>
-            <input type="email" name="email" value="" placeholder="Email">
-            <%--            <input type="text" name="name" id="txtHoTen" class="form-control" value="" placeholder="Nhập họ và tên" />--%>
+        <h5>THÔNG TIN CÁ NHÂN</h5>
+        <div class="d-grid col-xl-3 col-md-5 col-lg-4 col-xs-12">
+            <div class="form-input">
+                <label>Họ và tên <span style="color: orangered">*</span></label>
+                <input type="text" id="txtTen" runat="server" class="input" name="email" value="" placeholder="Họ và tên">
+            </div>
+            <br />
+            <div class="form-input">
+                <label>Email <span style="color: orangered">*</span></label>
+                <input type="text" id="txtEmail" runat="server" class="input" name="email" value="" placeholder="Email">
+            </div>
+            <br />
+            <div class="form-input">
+                <label>Địa chỉ <span style="color: orangered">*</span></label>
+                <input type="text" id="txtAddress" runat="server" class="input" name="email" value="" placeholder="Địa chỉ">
+            </div>
+            <br />
+            <div class="form-input">
+                <label>Số điện thoại <span style="color: orangered">*</span></label>
+                <input type="text" id="txtPhone" runat="server" name="phone" value="" placeholder="Số điện thoại">
+            </div>
+            <br />
+            <div class="form-input">
+                <label>Tên đăng nhập <span style="color: orangered">*</span></label>
+                <input type="text" id="txtUsername" runat="server" name="user_name" value="" placeholder="Tên đăng nhập">
+            </div>
+            <br />
+            <div class="form-input">
+                <label>Mật khẩu <span style="color: orangered">*</span></label>
+                <input type="password" id="txtPass" runat="server" name="password" value="" placeholder="Mật khẩu">
+            </div>
+            <br />
+            <div class="form-input">
+                <label>Nhập lại mật khẩu <span style="color: orangered">*</span></label>
+                <input type="password" id="txtCfPass" runat="server" name="password" value="" placeholder="Nhập lại mật khẩu">
+            </div>
+            <br />
         </div>
-        <br />
-        <div class="form-input">
-            <label>Số điện thoại <span style="color: orangered">*</span></label>
-            <input type="phone" name="phone" value="" placeholder="Phone">
-            <%--            <input type="text" name="name" class="form-control" runat="server" id="txtSdt" value="" placeholder="Nhập số điện thoại" />--%>
-        </div>
-        <br />
-        <div class="form-input">
-            <label>Tên đăng nhập <span style="color: orangered">*</span></label>
-            <input type="user_name" name="user_name" value="" placeholder="user_name">
-            <%--            <input type="text" name="name" class="form-control" runat="server" id="txtUser" value="" placeholder="Nhập tên đăng nhập" />--%>
-        </div>
-        <br />
-        <div class="form-input">
-            <label>Mật khẩu <span style="color: orangered">*</span></label>
-            <input type="password" name="password" value="" placeholder="Password">
-            <%--            <input type="password" name="name" class="form-control" value="" runat="server" id="txtPass" placeholder="Nhập mật khẩu" />--%>
-        </div>
-        <br />
-        <a href="#" class="input-dangnhap">Đăng ký</a>
+        <a href="#" class="btn btn-primary" id="btnRegister" runat="server" onserverclick="btnRegister_ServerClick" >Đăng ký</a>
 
         <br />
         <br />
         <br />
         <br />
-    </div>
+    </center>
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="ContentPlaceHolder6" runat="Server">
 </asp:Content>

@@ -50,58 +50,25 @@
             <div class="c20"></div>
             <div id="loadproducthome" style="position: relative">
                 <div class="flex-container">
-                    <div class="cell-1-4 b-pro tab-cell-1-2 mobile-cell-1-2 margin-bottom-20">
-                        <div>
-                            <a href="mon-an-choi/hen-xuc-banh-trang.html">
-                                <img src="images/Trang_chu/hen-xuc-banh-trang.jpg " width="100%" alt="Hến xúc bánh tráng" />
-                            </a>
-                        </div>
-                        <div class="product-name-home"><a href="mon-an-choi/hen-xuc-banh-trang.html">Hến xúc bánh tráng</a></div>
-                        <div class="product-price-home">75.000₫</div>
-                        <div class="c10"></div>
-                        <div align="center"><a class="btn-order-c" href="addcart/hen-xuc-banh-trang.html"><i class="fa fa-shopping-cart"></i>Đặt món</a></div>
-                        <div class="c10"></div>
-                    </div>
-                    <div class="cell-1-4 b-pro tab-cell-1-2 mobile-cell-1-2 margin-bottom-20">
-                        <div>
-                            <a href="bun-bo-dac-biet">
-                                <img src="images/Trang_chu/bun-bo-hue.jpg"
-                                    width="100%" alt="Bún bò Huế đặc biệt"></a>
-                        </div>
-                        <div class="product-name-home"><a href="bun-bo-dac-biet">Bún bò Huế đặc biệt</a></div>
-                        <div class="product-price-home">84.000₫</div>
-                        <div class="c10"></div>
-                        <div align="center"><a class="btn-order-c" href="addcart/bun-bo-hue-dac-biet.html"><i class="fa fa-shopping-cart"></i>Đặt món</a></div>
-                        <div class="c10"></div>
-                    </div>
-                    <div class="cell-1-4 b-pro tab-cell-1-2 mobile-cell-1-2 margin-bottom-20">
-                        <div>
-                            <a href="bun-hue/bun-cha-ca-thac-lac.html">
-                                <img src="images/Trang_chu/cha-ca-thac-lac.jpg"
-                                    width="100%" alt="Bún chả cá Thác lác"></a>
-                        </div>
-                        <div class="product-name-home"><a href="bun-hue/bun-cha-ca-thac-lac.html">Bún chả cá Thác lác</a></div>
-                        <div class="product-price-home">78.000₫</div>
-                        <div class="c10"></div>
-                        <div align="center"><a class="btn-order-c" href="addcart/bun-cha-ca-thac-lac.html"><i class="fa fa-shopping-cart"></i>Đặt món</a></div>
-                        <div class="c10"></div>
-                    </div>
-                    <div class="cell-1-4 b-pro tab-cell-1-2 mobile-cell-1-2 margin-bottom-20">
-                        <div>
-                            <a href="bun-hue/bun-hen.html">
-                                <img src="images/Trang_chu/bun-hen.jpg"
-                                    width="100%" alt="Bún hến"></a>
-                        </div>
-                        <div class="product-name-home"><a href="bun-hue/bun-hen.html">Bún hến</a></div>
-                        <div class="product-price-home">52.000₫</div>
-                        <div class="c10"></div>
-                        <div align="center"><a class="btn-order-c" href="addcart/bun-hen.html"><i class="fa fa-shopping-cart"></i>Đặt món</a></div>
-                        <div class="c10"></div>
-                    </div>
+                    <asp:Repeater runat="server" ID="rpMenu">
+                        <ItemTemplate>
+                            <div class="cell-1-4 b-pro tab-cell-1-2 mobile-cell-1-2 margin-bottom-20">
+                                <div>
+                                    <a href="<%#Eval("link") %>">
+                                        <img src="<%#Eval("pr_image") %>" width="100%" alt="<%#Eval("pr_name") %>" />
+                                    </a>
+                                </div>
+                                <div class="product-name-home"><a href="<%#Eval("link") %>"><%#Eval("pr_name") %></a></div>
+                                <div class="product-price-home"><%#Eval("pr_price") %></div>
+                                <div class="c10"></div>
+                                <div align="center"><a class="btn-order-c" href="javascript:void(0)" onclick="addCart(<%#Eval("pr_id") %>)">Đặt món</a></div>
+                                <div class="c10"></div>
+                            </div>
+                        </ItemTemplate>
+                    </asp:Repeater>
                     <div class="cell-1-4 tab-cell-1-2 mobile-cell-1-2"></div>
                     <div class="cell-1-4 tab-cell-1-2 mobile-cell-1-2"></div>
                 </div>
-
             </div>
             <div class="c40"></div>
         </div>
@@ -136,33 +103,36 @@
                 <div class="flex-container">
                     <div class="cell-1-3 margin-bottom-20 tab-cell-1-2 mobile-cell-1-1">
                         <div>
-                            <a href="tin-tuc">
+                            <a href="phong-phu-khau-vi">
                                 <img src="../images/banner/phuhopkhauvi.jpg" alt="Phong Phú Khẩu Vị Riêng Của Người Huế " class="image-news" width="100%"></a>
                         </div>
-                        <h3 class="news-name"><a href="tin-tuc">Phong Phú Khẩu Vị Riêng Của Người Huế </a></h3>
+                        <h3 class="news-name"><a href="phong-phu-khau-vi">Phong Phú Khẩu Vị Riêng Của Người Huế </a></h3>
                         <div>Nét Văn Hóa Ẩm Thực Của Người Huế</div>
                     </div>
                     <div class="cell-1-3 margin-bottom-20 tab-cell-1-2 mobile-cell-1-1">
                         <div>
-                            <a href="/blog-am-thuc/net-hue-khai-xuan-phuc-vu-tai-cho-ca-he-thong.html">
+                            <a href="khai-xuan">
                                 <img src="../images/Tet-2023/khai-xuan.jpg" alt="Nét Huế Khai Xuân Phục Vụ Tại Chỗ Cả Hệ Thống" class="image-news" width="100%"></a>
                         </div>
-                        <h3 class="news-name"><a href="/blog-am-thuc/net-hue-khai-xuan-phuc-vu-tai-cho-ca-he-thong.html">Nét Huế Khai Xuân Phục Vụ Tại Chỗ Cả Hệ Thống</a></h3>
+                        <h3 class="news-name"><a href="khai-xuan">Nét Huế Khai Xuân Phục Vụ Tại Chỗ Cả Hệ Thống</a></h3>
                         <div>&nbsp;</div>
                     </div>
                     <div class="cell-1-3 margin-bottom-20 tab-cell-1-2 mobile-cell-1-1">
                         <div>
-                            <a href="/blog-am-thuc/net-hue-ban-thong-tet-2022.html">
+                            <a href="thong-bao">
                                 <img src="../images/Tet-2023/phuc-vu-thong-tet.jpg" alt="Nét Huế Bán Thông Tết 2022" class="image-news" width="100%"></a>
                         </div>
-                        <h3 class="news-name"><a href="/blog-am-thuc/net-hue-ban-thong-tet-2022.html">Nét Huế Bán Thông Tết 2022</a></h3>
+                        <h3 class="news-name"><a href="thong-bao">Nét Huế Bán Thông Tết 2022</a></h3>
                         <div>&nbsp;</div>
                     </div>
                 </div>
             </div>
             <div class="c30"></div>
         </div>
-
+        <div style="display: none">
+            <input type="text" id="txtId" runat="server" name="name" value="" />
+            <a href="#" id="btnAdd" runat="server" onserverclick="btnAdd_ServerClick">content</a>
+        </div>
         <script>
             $(function () {
                 $('.box-list-map .item-map:first').addClass('active');
@@ -183,6 +153,12 @@
             })
         </script>
     </div>
+    <script>
+        function addCart(id) {
+            document.getElementById("<%=txtId.ClientID%>").value = id;
+            document.getElementById("<%=btnAdd.ClientID%>").click();
+        }
+    </script>
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="ContentPlaceHolder7" runat="Server">
 </asp:Content>
